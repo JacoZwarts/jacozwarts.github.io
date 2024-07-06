@@ -22,3 +22,32 @@ categories: [PortSwigger]
 1. The parameter of executable methods are user controllable.
 
 ![Code vulnerable to command injection](/images/portswigger/CommandInjection/VulnerableCommandInjectionCodeExample.png)
+
+### Types of Command Injection
+
+#### In-band Command Injection
+Consists of an attacker executing commands on the host operating system via a vulnerable application and `receiving the response of the command in the application.`
+<br/>
+#### Blind Command Injection
+Consists of an attacker executing commands on the host operating system via a vulnerable application `that does not return the output from the command within its HTTP response.`
+<br/>
+### Impact of Command Injection Attacks:
+- Unauthorized access to the application:
+    - `Confidentiality` - Command injection can be used to view sensitive information.
+    - `Integrity` - Command Injection can be used to alter content in the application.
+    - `Availability` - Command Injection can be used to delete content in the application.
+- Remote code execution on the operating system.
+
+![OWASP - Injection Ranking](/images/portswigger/CommandInjection/OWASP_Injection_Ranking)
+
+### How to find Command Injection ?
+#### Black-Box Testing
+- Map the application
+    - Identify all instances where the web application appears to be interacting with the underlying operating system. 
+- Fuzz the application. 
+    - Shell metacharacters: &, &&, |, ||, ;, \n, `, $(). 
+- For in-band command injection, analyze the response of the application to determine if it’s vulnerable. 
+- For blind command injection, you need to get creative. 
+    - Trigger a time delay using the ping or sleep command. 
+    - Output the response of the command in the web root and retrieve the file directly using a browser. 
+    - Open an out-of-band channel back to a server you control.
