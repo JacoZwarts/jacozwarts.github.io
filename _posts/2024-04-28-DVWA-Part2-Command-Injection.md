@@ -3,7 +3,7 @@ layout: post
 title:  "Damn Vulnerable Web Application - Part 2 / 12 Command Injection"
 date:   2024-04-28 10:00
 image:  /images/dvwa-walkthrough/DVWA.jpg
-tags:   [appsec,php,owasp,brute-force,command injection]
+tags:   [appsec,php,owasp,brute-force,Command Injection]
 categories: [Walkthrough]
 ---
 
