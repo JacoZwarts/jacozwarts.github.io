@@ -16,10 +16,10 @@ timezone: Australia/Sydney
 
 title: Zwarts-Sec # the main title
 
-tagline: AppSec, ApiSec and everything in between. # it will display as the sub-title
+tagline: Web Pen Testing, AppSec, ApiSec and everything in between. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Zwarts-Sec, everything related to application security, api security and everything in between.
+  Zwarts-Sec, everything related to web pen testing, application security, api security and everything in between.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
