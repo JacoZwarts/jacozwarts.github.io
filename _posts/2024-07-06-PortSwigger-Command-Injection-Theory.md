@@ -23,19 +23,24 @@ categories: [PortSwigger]
 <br/>
 
 ### Two conditions for OS Command Injection vulnerabilities:
+<hr/>
+
 1. Uses a function that can execute system commands such as exec.
 1. The parameter of executable methods are user controllable.
 
 ![Code vulnerable to command injection](/images/portswigger/CommandInjection/VulnerableCommandInjectionCodeExample.png)
 
 ### Types of Command Injection
+<hr/>
 
 #### In-band Command Injection
 Consists of an attacker executing commands on the host operating system via a vulnerable application and `receiving the response of the command in the application.`
 <br/>
+
 #### Blind Command Injection
 Consists of an attacker executing commands on the host operating system via a vulnerable application `that does not return the output from the command within its HTTP response.`
 <br/>
+
 ### Impact of Command Injection Attacks:
 - Unauthorized access to the application:
     - `Confidentiality` - Command injection can be used to view sensitive information.
@@ -46,6 +51,8 @@ Consists of an attacker executing commands on the host operating system via a vu
 ![OWASP - Injection Ranking](/images/portswigger/CommandInjection/OWASP_Injection_Ranking)
 
 ### How to find Command Injection ?
+<hr/>
+
 #### Black-Box Testing
 - Map the application
     - Identify all instances where the web application appears to be interacting with the underlying operating system. 
@@ -56,6 +63,7 @@ Consists of an attacker executing commands on the host operating system via a vu
     - Trigger a time delay using the ping or sleep command. 
     - Output the response of the command in the web root and retrieve the file directly using a browser. 
     - Open an out-of-band channel back to a server you control.
+
 #### White-Box Testing
 - Perform a combination of black box and white-box testing. 
 - Map all input vectors in the application. 
@@ -63,6 +71,7 @@ Consists of an attacker executing commands on the host operating system via a vu
 - Once a vulnerability is identified, test it to confirm that it is exploitable.
 
 ### How to exploit command injection ?
+<hr/>
 #### Exploiting In-band Command injection
 - Shell metacharacters:
 ```
@@ -109,6 +118,8 @@ $()
 ```
 
 ### How to prevent Command injection ?
+<hr/>
+
 #### Preventing Command Injection Vulnerabilities
 The most effective way to prevent OS command injection vulnerabilities is to never call out to OS commands from application-layer code. Instead, implement the required functionality using safer platform APIs.
 - For example: use mkdir() instead of system("mkdir/dir_name")
