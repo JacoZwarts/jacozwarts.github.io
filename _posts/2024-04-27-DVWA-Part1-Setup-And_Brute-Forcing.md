@@ -3,8 +3,8 @@ layout: post
 title:  "Damn Vulnerable Web Application - Part 1 / 12 Setup & Brute Force"
 date:   2024-04-27 01:07
 image:  /images/dvwa-walkthrough/DVWA.jpg
-tags:   [appsec,php,owasp,brute-force]
-categories: [Walkthrough]
+tags:   [brute-force]
+categories: [DVWA]
 ---
 
 # Introduction

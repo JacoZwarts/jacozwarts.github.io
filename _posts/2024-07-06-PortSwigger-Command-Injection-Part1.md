@@ -3,8 +3,8 @@ layout: post
 title:  "PortSwigger - Command injection Part 1"
 date:   2024-07-06 13:40
 image:  /images/portswigger/WebSecurityAcademy.png
-tags:   [BSCP,PortSwigger,Command Injection]
-categories: [BSCP]
+tags:   [command-njection]
+categories: [PortSwigger]
 ---
 
 # Introduction

@@ -3,8 +3,8 @@ layout: post
 title:  "Damn Vulnerable Web Application - Part 3 / 12 CSRF"
 date:   2024-04-29 20:00
 image:  /images/dvwa-walkthrough/DVWA.jpg
-tags:   [appsec,php,owasp,csrf]
-categories: [Walkthrough]
+tags:   [csrf]
+categories: [DVWA]
 ---
 
 # Cross Site Request Forgery (CSRF)
