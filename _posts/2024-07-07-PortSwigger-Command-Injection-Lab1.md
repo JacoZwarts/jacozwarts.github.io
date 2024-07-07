@@ -8,7 +8,10 @@ categories: [PortSwigger]
 ---
 
 # Lab 1 - OS Command Injection - Simple Case
->OS Command Injection is a vulnerability that consists of an attacker executing commands on the host operating system via a vulnerable application.
+>Lab Objective:
+This lab contains an OS command injection vulnerability in the product stock checker.
+The application executes a shell command containing user-supplied product and store IDs, and returns the raw output from the command in its response.
+To solve the lab, execute the whoami command to determine the name of the current user.
 <br/>
 <br/>
 <b>Reference:</b>
@@ -18,12 +21,7 @@ categories: [PortSwigger]
 <a href="https://academy.ranakhalil.com/courses/1491236/lectures/38308204">Rana Khalil - Lab 1</a>
 <br/>
 
-### Lab Objective:
-<hr/>
 
-This lab contains an OS command injection vulnerability in the product stock checker.
-The application executes a shell command containing user-supplied product and store IDs, and returns the raw output from the command in its response.
-To solve the lab, execute the whoami command to determine the name of the current user.
 
 ### Solution
 <hr/>
