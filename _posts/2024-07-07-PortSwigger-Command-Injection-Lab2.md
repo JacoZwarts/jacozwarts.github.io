@@ -7,7 +7,7 @@ tags:   [command-injection]
 categories: [PortSwigger]
 ---
 
-# Lab 1 - OS Command Injection - Simple Case
+# Lab 2 - Blind OS command injection with time delays
 >Lab Objective:
 This lab contains a blind OS command injection vulnerability in the feedback function.
 The application executes a shell command containing the user-supplied details. The output from the command is not returned in the response.
