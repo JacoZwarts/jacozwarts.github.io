@@ -14,15 +14,6 @@ categories: [PortSwigger]
 - Possession Factor: Something you have such as a mobile device or a security token.
 - Inherence Factor: Something you are or do. Bio metrics or a patterns of behavior.
 <br/>
-<br/>
-<b>Reference:</b>
-<br/>
-<a href="https://academy.ranakhalil.com/courses/web-security-academy-video-series/lectures/45273752">Rana Khalil Academy - Authentication</a>
-<br/>
-<a href="https://portswigger.net/web-security/authentication">PortSwigger - Authentication vulnerabilities</a>
-<br/>
-<a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">OWASP - Authentication Cheat Sheet</a>
-
 
 ### What's the difference between authentication and authorization?
 <hr/>
@@ -141,5 +132,10 @@ Passwords should be hashed and not encrypted.
 - Conduct technical interviews with the developers to review how passwords are stored in the backend database
 
 #### Reference:
-<a href="https://github.com/rkhal101/Web-Security-Academy-Series/blob/main/broken-authentication/theory/Authentication%20Vulnerabilities%20Complete%20Guide%20Theory%20Video%20Slides.pdf">Rana Khalil - Authentication Vulnerabilities Complete Guide Theory</a>
+<a href="https://github.com/rkhal101/Web-Security-Academy-Series/blob/main/broken-authentication/theory/Authentication%20Vulnerabilities%20Complete%20Guide%20Theory%20Video%20Slides.pdf">Rana Khalil - Authentication Vulnerabilities Complete Guide Theory</a><br/>
+<a href="https://academy.ranakhalil.com/courses/web-security-academy-video-series/lectures/45273752">Rana Khalil Academy - Authentication</a>
+<br/>
+<a href="https://portswigger.net/web-security/authentication">PortSwigger - Authentication vulnerabilities</a>
+<br/>
+<a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">OWASP - Authentication Cheat Sheet</a>
 <hr/>
