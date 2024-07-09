@@ -39,7 +39,8 @@ Authentication is the process of verifying a user is who they claim to be, autho
 - Defects in Multistage login mechanism
 - Insecure Storage of Credentials
 
-#### Weak Password Requirements
+#### Weak Password Requirement
+
 <a href="https://danielmiessler.com/p/casmm-consumer-authentication-security-maturity-model">CASMM module should be used.</a>
 
 - Very short or blank
@@ -50,6 +51,7 @@ Authentication is the process of verifying a user is who they claim to be, autho
 <br/>
 
 #### Improper Restriction of Authentication Attempts
+
 Application permits brute force or other automated attacks.
 
 - Login Page
@@ -68,6 +70,7 @@ The application outputs a verbose error message that allows for username enumera
 The application uses an un-encrypted HTTP connection to transmit login credentials
 
 #### Insecure Forgot Password Functionality
+
 Design weaknesses in the forgotten password functionality usually makes the weakest link that can be used to attack the application's overall authentication logic.
 
 #### Defects in Multistage Login Mechanism
@@ -100,6 +103,7 @@ Passwords should be hashed and not encrypted.
 - If you control a single account and password change is possible, attempt to change the password to various weak values.
 
 #### Improper Restriction of Authentication Attempts:
+
  - Manually submit several bad login attempts for an account control.
  - After 10 failed login attempts, if the application does not return a message about account lockout, attempt to log in correctly. If it works, then there is no lockout mechanism.
    - Run a brute force attack to enumerate the valid password. 
@@ -107,6 +111,7 @@ Passwords should be hashed and not encrypted.
 - If the account is locked out, monitor the requests and responses to determine if the lockout mechanism is insecure
 
 #### Verbose Error Message:
+
 - Submit a request with a valid username and an invalid password.
 - Submit a request with an invalid username.
 - Review both responses for any differences in the status code, any redirects, information displayed on the screen, HTML page source, or even the time to process the request.
@@ -119,17 +124,20 @@ Passwords should be hashed and not encrypted.
 - Attempt to access the application over HTTP and if there are any redirects to HTTPS.
 
 #### Insecure Forgot Password Functionality:
+
  - Identify if the application has any forgotten password functionality
  - If it does, perform a complete walk-through of the forgot password functionality using an account you have control of while intercepting the requests / responses in a proxy.
  - Review the functionality to determine if it allows for username enumeration or brute-force attacks.
  - If the application generates an email containing a recovery URL, obtain a number of these URLs and attempt to identify any predictable patterns or sensitive information included in the URL. Also check if the URL is long lived and does not expire.
 
  #### Defects in Multistage login Mechanism:
+
  - Identify if the application uses a multistage login mechanism.
  - If it does, perform a complete walk-through using an account you have control of while intercepting the requests / responses in a proxy.
  - Review the functionality to determine if the allows for username enumeration or brute-force attacks.
 
- #### Insecure Storage of Credentials
+ #### Insecure Storage of Credentials:
+
  - Review all the application's authentication related functionality. If you find any instances where the user's password is transmitted to the client plaintext or obfuscated, this indicates the passwords are being stored insecurely.
 - If you gain remote code execution (RCE) on the server, review the database to determine if the passwords are stored insecurely.
 - Conduct technical interviews with the developers to review how passwords are stored in the backend database
