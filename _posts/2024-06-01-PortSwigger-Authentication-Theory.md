@@ -78,6 +78,7 @@ Design weaknesses in the forgotten password functionality usually makes the weak
 Insecure implementation of the MFA functionality. Passing the user's credentials as parameters.
 
 #### Insecure Storage of Credentials
+
 Uses plain text, encrypted, or weekly hashed password data stores.
 This is both a cryptographic failure vulnerability and an authentication vulnerability.
 Passwords should be hashed and not encrypted.
@@ -130,11 +131,13 @@ Passwords should be hashed and not encrypted.
  - Review the functionality to determine if it allows for username enumeration or brute-force attacks.
  - If the application generates an email containing a recovery URL, obtain a number of these URLs and attempt to identify any predictable patterns or sensitive information included in the URL. Also check if the URL is long lived and does not expire.
 
+
  #### Defects in Multistage login Mechanism:
 
  - Identify if the application uses a multistage login mechanism.
  - If it does, perform a complete walk-through using an account you have control of while intercepting the requests / responses in a proxy.
  - Review the functionality to determine if the allows for username enumeration or brute-force attacks.
+
 
  #### Insecure Storage of Credentials:
 
