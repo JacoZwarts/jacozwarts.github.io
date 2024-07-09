@@ -130,13 +130,10 @@ Passwords should be hashed and not encrypted.
  - If it does, perform a complete walk-through of the forgot password functionality using an account you have control of while intercepting the requests / responses in a proxy.
  - Review the functionality to determine if it allows for username enumeration or brute-force attacks.
  - If the application generates an email containing a recovery URL, obtain a number of these URLs and attempt to identify any predictable patterns or sensitive information included in the URL. Also check if the URL is long lived and does not expire.
-
-
  #### Defects in Multistage login Mechanism:
  - Identify if the application uses a multistage login mechanism.
  - If it does, perform a complete walk-through using an account you have control of while intercepting the requests / responses in a proxy.
  - Review the functionality to determine if the allows for username enumeration or brute-force attacks.
-
  #### Insecure Storage of Credentials:
  - Review all the application's authentication related functionality. If you find any instances where the user's password is transmitted to the client plaintext or obfuscated, this indicates the passwords are being stored insecurely.
 - If you gain remote code execution (RCE) on the server, review the database to determine if the passwords are stored insecurely.
