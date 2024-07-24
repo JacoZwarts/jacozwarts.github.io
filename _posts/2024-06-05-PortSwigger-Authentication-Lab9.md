@@ -19,6 +19,7 @@ To solve the lab, brute-force Carlos's cookie to gain access to his "My account"
 <br/>
 <a href="https://portswigger.net/web-security/authentication/auth-lab-passwords">Candidate passwords</a>
 <br/>
+<br/>
 <b>Reference:</b>
 <br/>
 <a href="https://portswigger.net/web-security/authentication/other-mechanisms/lab-brute-forcing-a-stay-logged-in-cookie">Port Swigger - Lab 9</a>

@@ -18,6 +18,7 @@ This lab's two-factor authentication is vulnerable due to its flawed logic. To s
 <br/>
 You also have access to the email server to receive your 2FA verification code
 <br/>
+<br/>
 <b>Reference:</b>
 <br/>
 <a href="https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic">Port Swigger - Lab 8</a>
