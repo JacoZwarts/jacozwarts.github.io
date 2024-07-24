@@ -3,7 +3,7 @@ layout: post
 title:  "PortSwigger - Authentication - Lab 1"
 date:   2024-06-03 18:20
 image:  /images/portswigger/WebSecurityAcademy.png
-tags:   [command-injection]
+tags:   [authentication]
 categories: [PortSwigger]
 ---
 
@@ -24,9 +24,6 @@ The lab has an account with a predictable username and password, which can be fo
 <br/>
 <a href="https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-different-responses">Port Swigger - Lab 1</a>
 <br/>
-
-
-
 
 ### Solution
 <hr/>
