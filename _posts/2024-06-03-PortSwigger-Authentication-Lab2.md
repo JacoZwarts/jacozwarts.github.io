@@ -15,8 +15,8 @@ This lab's two-factor authentication can be bypassed. You have already obtained 
 The lab has an account with a predictable username and password, which can be found in the following wordlists:
 <br/>
 <br/>
-`Your credentials:` wiener:peter<br/>
-`Victim's credentials carlos:`montoya
+`Your credentials: wiener:peter`<br/>
+`Victim's credentials carlos:montoya`
 <br/>
 <br/>
 <b>Reference:</b>
