@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PortSwigger - Authentication - Mystery Labs Checklist"
+title:  "PortSwigger - Directory Traversal - Mystery Labs Checklist"
 date:   2024-06-10 00:00
 image:  /images/portswigger/WebSecurityAcademy.png
 tags:   [directory-traversal]
