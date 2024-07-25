@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PortSwigger - Authentication - Lab 11"
-date:   2024-06-05 18:20
+date:   2024-06-05 18:50
 image:  /images/portswigger/WebSecurityAcademy.png
 tags:   [authentication]
 categories: [PortSwigger]
