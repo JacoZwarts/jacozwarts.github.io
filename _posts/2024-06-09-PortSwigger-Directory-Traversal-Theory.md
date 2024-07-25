@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PortSwigger - Directory Traversal - Theory"
-date:   2024-06:09 13:40
+date:   2024-06-09 00:00
 image:  /images/portswigger/WebSecurityAcademy.png
 tags:   [directory-traversal]
 categories: [PortSwigger]
