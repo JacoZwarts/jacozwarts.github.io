@@ -21,6 +21,8 @@ You can log in to your own account using the following credentials: `wiener:pete
 <br/>
 <a href="https://academy.ranakhalil.com/courses/1491236/lectures/44961556">Rana Khalil - Business Logic Vulnerability -  Lab1</a>
 <br/>
+<a href="https://github.com/JacoZwarts/PortSwigger-Labs/blob/main/5.%20Business%20Logic%20Vulnerabilities/Labs/Lab%201%20-%20Excessive%20trust%20in%20client-side%20controls/Business-Logic-Vulnerability-Lab1.py">Python Script</a>
+<br/>
 
 
 
