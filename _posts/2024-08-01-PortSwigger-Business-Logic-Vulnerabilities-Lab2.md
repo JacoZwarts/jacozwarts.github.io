@@ -60,5 +60,5 @@ You can log in to your own account using the following credentials: `wiener:pete
 #### 8. Click on `Place Order` we've now purchased the `Lightweight "l33t" Leather Jacket` for `$13.98`
 
 ![Business Logic Vulnerability - Second Product Request](/images/portswigger/BusinessLogic/Lab2/Business-Logic-Lab2-Solved.png)
-####
+
 <hr/>
