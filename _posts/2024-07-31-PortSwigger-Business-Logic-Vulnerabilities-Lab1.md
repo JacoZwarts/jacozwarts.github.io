@@ -32,21 +32,21 @@ You can log in to your own account using the following credentials: `wiener:pete
 #### 1. Login in with provided credentials `wiener:peter`
 #### 2. Click on `Home` to see the shop.
 
-![Business Logic Vulnerability Shop](/images/portswigger/BusinessLogic/Business-Logic-Lab1-Shop.png)
+![Business Logic Vulnerability Shop](/images/portswigger/BusinessLogic/Lab1/Business-Logic-Lab1-Shop.png)
 
 #### 3. Click on view Details for the `Lightweight "l33t" Leather Jacket` product
 
-![Business Logic Vulnerability - Product Detail](/images/portswigger/BusinessLogic/Business-Logic-Lab1-Product_Detail.png)
+![Business Logic Vulnerability - Product Detail](/images/portswigger/BusinessLogic/Lab1/Business-Logic-Lab1-Product_Detail.png)
 
 #### 4. Intercept the request to Add `Lightweight "l33t" Leather Jacket` to your cart.
 
-![Business Logic Vulnerability - Cart Request](/images/portswigger/BusinessLogic/Business-Logic-Lab1-Add-Cart_Request.png)
+![Business Logic Vulnerability - Cart Request](/images/portswigger/BusinessLogic/Lab1/Business-Logic-Lab1-Add-Cart-Request.png)
 
 #### 5. Change the price in the above request
-![Business Logic Vulnerability - Cart Request Price adjust](/images/portswigger/BusinessLogic/Business-Logic-Lab1-Cart-Request-Price.png)
+![Business Logic Vulnerability - Cart Request Price adjust](/images/portswigger/BusinessLogic/Lab1/Business-Logic-Lab1-Cart-Request-Price.png)
 
 #### 6. Navigate to your cart and purchase the `Lightweight "l33t" Leather Jacket` for $0.01
-![Business Logic Vulnerability - Purchase item](/images/portswigger/BusinessLogic/Business-Logic-Lab1-Product-Purchase.png)
-![Business Logic Vulnerability - Lab 1 Solved](/images/portswigger/BusinessLogic/Business-Logic-Lab1-Solved.png)
+![Business Logic Vulnerability - Purchase item](/images/portswigger/BusinessLogic/Lab1/Business-Logic-Lab1-Product-Purchase.png)
+![Business Logic Vulnerability - Lab 1 Solved](/images/portswigger/BusinessLogic/Lab1/Business-Logic-Lab1-Solved.png)
 
 <hr/>
