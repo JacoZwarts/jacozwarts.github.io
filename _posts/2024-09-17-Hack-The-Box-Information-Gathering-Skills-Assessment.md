@@ -64,7 +64,7 @@ gobuster vhost -u http://inlanefreight.htb:{PORT} -w /usr/share/seclists/Discove
 sudo sh -c 'echo "{TARGET_IP} web1337.inlanefreight.htb" >> /etc/hosts'
 ```
 
-#### 3. Navigate to the robots.txt `http://web1337.inlanefreight.htb:{PORT}/robots.txt` file and look notice the Disallow directory:
+#### 3. Navigate to the robots.txt `http://web1337.inlanefreight.htb:{PORT}/robots.txt` file and look for the Disallow directory:
 ![robots.txt content](/images/htb/information-gathering/robots-content.png)
 
 #### 4. Execute the below command to enumerate directories / files
@@ -76,7 +76,7 @@ ffuf -u http://web1337.inlanefreight.htb:39535/FUZZ -w /usr/share/wordlists/secl
 
 ## Q4: After crawling the inlanefreight.htb domain on the target system, what is the email address you have found? Respond with the full email, e.g., mail@inlanefreight.htb. & Q5: What is the API key the inlanefreight.htb developers will be changing too?
 
-#### 1. Execute the below command to find find sub domains for web1337.inlanefreight.htb
+#### 1. Execute the below command to find sub domains for web1337.inlanefreight.htb
 
 ```
 gobuster vhost -u http://inlanefreight.htb:{PORT} -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt --append-domain
