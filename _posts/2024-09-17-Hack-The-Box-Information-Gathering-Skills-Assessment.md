@@ -21,8 +21,6 @@ Demonstrate your proficiency by effectively utilizing these techniques. Remember
 <br/>
 <a href="https://academy.hackthebox.com/module/144/section/1311">Information Gathering - Web Edition</a>
 <br/>
-https://dev.to/saramazal/htb-academy-information-gathering-web-edition-module-skills-assessment-part-ii-question-5-5bef
-https://dev.to/saramazal/htb-academyinformation-gathering-web-edition-updatedskills-assessment-part-iii-3o33
 
 ## Q1: What is the IANA ID of the registrar of the inlanefreight.com domain?
 
