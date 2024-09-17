@@ -36,7 +36,7 @@ whois inlanefreight.com
 
 ## Q2: What http server software is powering the inlanefreight.htb site on the target system? Respond with the name of the software, not the version, e.g., Apache.
 
-#### 1. Execute the bellow command add the Target_IP and hostname to /etc/hosts
+#### 1. Execute the bellow command to add the Target_IP and hostname to /etc/hosts
 
 ```
 sudo sh -c 'echo "{TARGET_IP} inlanefreight.htb" >> /etc/hosts'
