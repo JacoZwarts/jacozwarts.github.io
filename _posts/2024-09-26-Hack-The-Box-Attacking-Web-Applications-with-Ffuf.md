@@ -52,21 +52,21 @@ sudo sh -c 'echo "{TARGET_IP} faculty.academy.htb" >> /etc/hosts'
 #### Execute the below command to start the extension scan for archive.academy.htb
 
 ```
-ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://archive.academy.htb:43905/indexFUZZ
+ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://archive.academy.htb:{PORT}/indexFUZZ
 ```
 ![Extension scan result for archive.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-archive-academy-htb.png)
 
 #### Execute the below command to start the extension scan for test.academy.htb
 
 ```
-ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://test.academy.htb:43905/indexFUZZ
+ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://test.academy.htb:{PORT}/indexFUZZ
 ```
 ![Extension scan result for test.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-test-academy-htb.png)
 
 #### Execute the below command to faculty the extension scan for test.academy.htb
 
 ```
-ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://faculty.academy.htb:43905/indexFUZZ
+ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://faculty.academy.htb:{PORT}/indexFUZZ
 ```
 ![Extension scan result for faculty.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-faculty-academy-htb.png)
 
@@ -79,7 +79,7 @@ ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u htt
 #### Execute the following command to start the directory fuzzing
 
 ```
-ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://faculty.academy.htb:PORT/FUZZ -recursion -recursion-depth 1 -e .php,.php7,.phps -fs 287 -t 200
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://faculty.academy.htb:{PORT}/FUZZ -recursion -recursion-depth 1 -e .php,.php7,.phps -fs 287 -t 200
 ```
 
 ![Directory Fuzzing - Result 1/3](/images/htb/awa-with-ffuf/q3-result1.png)
