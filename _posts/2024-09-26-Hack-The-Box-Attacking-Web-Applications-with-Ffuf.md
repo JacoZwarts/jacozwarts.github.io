@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - Attacking Web Applications with Ffuf"
 date:   2024-09-26 14:36
-image:  /images/htb/attack-web-applications-with-ffuf/htb-awa-ffuf.png
+image:  /images/htb/awa-with-ffuf/htb-awa-ffuf.png
 tags:   [recon]
 categories: [htbacademy]
 ---
@@ -30,7 +30,7 @@ sudo sh -c 'echo "{TARGET_IP} academy.htb" >> /etc/hosts'
 ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://academy.htb:{PORT}/ -H 'Host: FUZZ.academy.htb' -fs 985
 ```
 
-![Sub-domain and vhost scan results](/images/htb/attacking-web-applications-with-ffuf/subdomain-vhost-scan-results.png)
+![Sub-domain and vhost scan results](/images/htb/awa-with-ffuf/subdomain-vhost-scan-results.png)
 
 ### Answer: 
  `test, archive, faculty`
@@ -54,21 +54,21 @@ sudo sh -c 'echo "{TARGET_IP} faculty.academy.htb" >> /etc/hosts'
 ```
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://archive.academy.htb:43905/indexFUZZ
 ```
-![Extension scan result for archive.academy.htb](/images/htb/attacking-web-applications-with-ffuf/extension-fuzzing-archive-academy-htb.png)
+![Extension scan result for archive.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-archive-academy-htb.png)
 
 #### Execute the below command to start the extension scan for test.academy.htb
 
 ```
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://test.academy.htb:43905/indexFUZZ
 ```
-![Extension scan result for test.academy.htb](/images/htb/attacking-web-applications-with-ffuf/extension-fuzzing-test-academy-htb.png)
+![Extension scan result for test.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-test-academy-htb.png)
 
 #### Execute the below command to faculty the extension scan for test.academy.htb
 
 ```
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://faculty.academy.htb:43905/indexFUZZ
 ```
-![Extension scan result for faculty.academy.htb](/images/htb/attacking-web-applications-with-ffuf/extension-fuzzing-faculty-academy-htb.png)
+![Extension scan result for faculty.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-faculty-academy-htb.png)
 
 ### Answer: 
  `php, phps, php7`
@@ -82,11 +82,11 @@ ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u htt
 ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://faculty.academy.htb:PORT/FUZZ -recursion -recursion-depth 1 -e .php,.php7,.phps -fs 287 -t 200
 ```
 
-![Directory Fuzzing - Result 1/3](/images/htb/attacking-web-applications-with-ffuf/q3-result1.png)
+![Directory Fuzzing - Result 1/3](/images/htb/awa-with-ffuf/q3-result1.png)
 
-![Directory Fuzzing - Result 2/3](/images/htb/attacking-web-applications-with-ffuf/q3-result2.png)
+![Directory Fuzzing - Result 2/3](/images/htb/awa-with-ffuf/q3-result2.png)
 
-![Directory Fuzzing - Result 3/3](/images/htb/attacking-web-applications-with-ffuf/q3-result3.png)
+![Directory Fuzzing - Result 3/3](/images/htb/awa-with-ffuf/q3-result3.png)
 
 ### Answer: 
  `http://faculty.academy.htb:PORT/courses/linux-security.php7`
@@ -99,16 +99,16 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-s
 ```
 ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://faculty.academy.htb:{PORT}/courses/linux-security.php7?FUZZ=key -fs 774
 ```
-![Parameter Fuzzing - Result 1/3](/images/htb/attacking-web-applications-with-ffuf/q4-result1.png)
+![Parameter Fuzzing - Result 1/](/images/htb/awa-with-ffuf/q4-result1.png)
 
-![Parameter Fuzzing - Result 2/3](/images/htb/attacking-web-applications-with-ffuf/q4-result2.png)
+![Parameter Fuzzing - Result 2/3](/images/htb/awa-with-ffuf/q4-result2.png)
 
 #### Execute the following command to start the parameter fuzzing using POST
 
 ```
 ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://faculty.academy.htb:{PORT}/courses/linux-security.php7 -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs 774
 ```
-![Parameter Fuzzing - Result 3/3](/images/htb/attacking-web-applications-with-ffuf/q4-result3.png)
+![Parameter Fuzzing - Result 3/3](/images/htb/awa-with-ffuf/q4-result3.png)
 
 ### Answer: 
  `user,username`
@@ -121,7 +121,7 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names
 ```
 ffuf -w /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt:FUZZ -u http://faculty.academy.htb:{PORT}/courses/linux-security.php7 -X POST -d 'username=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs 781
 ```
-![Username Enumeration - Result 1/2](/images/htb/attacking-web-applications-with-ffuf/q5-result1.png)
+![Username Enumeration - Result 1/2](/images/htb/awa-with-ffuf/q5-result1.png)
 
 #### Execute the following command retrieve the flag:
 
@@ -129,7 +129,7 @@ ffuf -w /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.tx
 curl http://faculty.academy.htb:{PORT}/courses/linux-security.php7 -X POST -d 'username=harry' -H 'Content-Type: application/x-www-form-urlencoded'
 
 ```
-![Username Enumeration - Result 2/2](/images/htb/attacking-web-applications-with-ffuf/q5-result1.png)
+![Username Enumeration - Result 2/2](/images/htb/awa-with-ffuf/q5-result1.png)
 
 ### Answer: 
  `HTB{w3b_fuzz1n6_m4573r}`
