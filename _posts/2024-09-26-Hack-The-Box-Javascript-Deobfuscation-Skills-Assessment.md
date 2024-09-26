@@ -49,7 +49,7 @@ Notice the log in the `Console` tab
 
 ## Q4: Try to Analyze the deobfuscated JavaScript code, and understand its main functionality. Once you do, try to replicate what it's doing to get a secret key. What is the key?
 
-#### After investigating the code, notice it's making an HTTP Post request to `{Target}/keys.php`
+#### After investigating the code, notice it's making a HTTP Post request to `{Target}/keys.php`
 
 ![Q4 Javascript Logic](/images/htb/js-deobfuscation/Q4-Logic.png)
 
