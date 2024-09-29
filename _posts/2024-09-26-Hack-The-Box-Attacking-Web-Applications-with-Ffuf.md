@@ -19,17 +19,19 @@ Finally, you should do some fuzzing on pages you identify to see if any of them 
 
 ## Q1: Run a sub-domain/vhost fuzzing scan on '*.academy.htb' for the IP shown above. What are all the sub-domains you can identify? (Only write the sub-domain name)
 
-#### Execute the below command to add academy.htb to /etc/hosts
+#### Add academy.htb to /etc/hosts: Replace {TARGET_IP} with the actual target IP address and execute the command:
 ```
 sudo sh -c 'echo "{TARGET_IP} academy.htb" >> /etc/hosts'
 ```
 
-#### Execute the below command to start the sub-domain/vhost scan
+#### Run the Subdomain/Vhost Scan: Execute the following command to start the scan.
 
 ```
 ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://academy.htb:{PORT}/ -H 'Host: FUZZ.academy.htb' -fs 985
 ```
+- After running the command, ffuf will scan for subdomains and should list any found subdomains under *.academy.htb.
 
+- The results will include valid subdomains that respond with a different size than 985 bytes (which is what -fs 985 is filtering out)
 ![Sub-domain and vhost scan results](/images/htb/awa-with-ffuf/subdomain-vhost-scan-results.png)
 
 ### Answer: 
@@ -38,7 +40,7 @@ ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -
 
 ## Q2: Before you run your page fuzzing scan, you should first run an extension fuzzing scan. What are the different extensions accepted by the domains?
 
-#### Execute the below commands to add the sub domains to /etc/hosts
+#### 1. Add the Subdomains to /etc/hosts: Execute the following commands, replacing {TARGET_IP} with the actual target IP address:
 ```
 sudo sh -c 'echo "{TARGET_IP} acrhive.academy.htb" >> /etc/hosts'
 ```
@@ -49,21 +51,23 @@ sudo sh -c 'echo "{TARGET_IP} test.academy.htb" >> /etc/hosts'
 sudo sh -c 'echo "{TARGET_IP} faculty.academy.htb" >> /etc/hosts'
 ```
 
-#### Execute the below command to start the extension scan for archive.academy.htb
+#### 2. Run Extension Fuzzing Scans: You will run extension fuzzing scans for each subdomain using ffuf
+
+For `archive.academy.htb`:
 
 ```
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://archive.academy.htb:{PORT}/indexFUZZ
 ```
 ![Extension scan result for archive.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-archive-academy-htb.png)
 
-#### Execute the below command to start the extension scan for test.academy.htb
+For `test.academy.htb`:
 
 ```
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://test.academy.htb:{PORT}/indexFUZZ
 ```
 ![Extension scan result for test.academy.htb](/images/htb/awa-with-ffuf/extension-fuzzing-test-academy-htb.png)
 
-#### Execute the below command to faculty the extension scan for test.academy.htb
+For `faculty.academy.htb`:
 
 ```
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://faculty.academy.htb:{PORT}/indexFUZZ
