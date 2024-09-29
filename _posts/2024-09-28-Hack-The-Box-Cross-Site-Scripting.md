@@ -37,9 +37,9 @@ python xsstrike.py -u "http://{TARGET}?id=1"
 
 ## Q1:  What is the value of the 'flag' cookie?
 
-In this guide, we'll walk through how to extract the 'flag' cookie during a skills assessment using the Hack The Box provided VM. Let's dive in!
+In this guide, we'll walk through how to extract the 'flag' cookie during the XSS skills assessment using the Hack The Box provided VM. Let's dive in!
 
-#### 1. Set Up Your Environment
+#### 1. Set Up the Environment
 Start by creating a temporary directory for our script and files. Run the following command to create the directory:
 ```
 mkdir /tmp/tempserver
