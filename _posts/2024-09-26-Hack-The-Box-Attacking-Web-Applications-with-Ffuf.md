@@ -14,7 +14,7 @@ Finally, you should do some fuzzing on pages you identify to see if any of them 
 <br/>
 <b>Links:</b>
 <br/>
-<a href="https://academy.hackthebox.com/module/54/section/511">Attacking Web Applications with Ffuf</a>
+<a href="https://academy.hackthebox.com/module/54/section/511">Attacking Web Applications with Ffuf</a><br/>
 <a href="https://jacozwarts.github.io/images/htb/awa-with-ffuf/Attacking_Web_Applications_With_Ffuf_Module_Cheat_Sheet.pdf">Attacking Web Applications with Ffuf - Cheat Sheet</a>
 <br/>
 

@@ -18,7 +18,7 @@ Apply the skills you learned in this module to achieve the following:<br/><br/>
 <br/>
 <b>Links:</b>
 <br/>
-<a href="https://academy.hackthebox.com/module/103/section/1011">Cross-Site Scripting (XSS)</a>
+<a href="https://academy.hackthebox.com/module/103/section/1011">Cross-Site Scripting (XSS)</a><br/>
 <a href="https://jacozwarts.github.io/images/htb/cross-site-scripting/Cross_Site_Scripting_Xss_Module_Cheat_Sheet.pdf">Cross-Site Scripting (XSS) - Cheat Sheet</a>
 <br/>
 

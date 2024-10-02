@@ -19,7 +19,7 @@ Demonstrate your proficiency by effectively utilizing these techniques. Remember
 <br/>
 <b>Links:</b>
 <br/>
-<a href="https://academy.hackthebox.com/module/144/section/1311">Information Gathering - Web Edition</a>
+<a href="https://academy.hackthebox.com/module/144/section/1311">Information Gathering - Web Edition</a><br/>
 <a href="https://jacozwarts.github.io/images/htb/information-gathering/Information_Gathering_Web_Edition_Module_Cheat_Sheet.pdf">Information Gathering - Cheat Sheet</a>
 <br/>
 

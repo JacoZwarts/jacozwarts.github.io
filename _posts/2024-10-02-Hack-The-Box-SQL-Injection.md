@@ -8,13 +8,14 @@ categories: [htbacademy]
 ---
 
 ><b>Overview:</b>
-<br/><br/>
+ Assess the web application and use a variety of techniques to gain remote code execution and find a flag in the / root directory of the file system. Submit the contents of the flag as your answer.
+<br/>
 <a href="https://academy.hackthebox.com/module/33/section/193">Introduction to SQL Injection</a>
 
 <br/>
 <b>Links:</b>
 <br/>
-<a href="https://academy.hackthebox.com/module/33/section/177">SQL Injection Fundamentals</a>
+<a href="https://academy.hackthebox.com/module/33/section/177">SQL Injection Fundamentals</a><br/>
 <a href="https://jacozwarts.github.io/images/htb/sql-injection/Sql_Injection_Fundamentals_Module_Cheat_Sheet.pdf">SQL Injection - Cheat Sheet</a>
 <br/>
 

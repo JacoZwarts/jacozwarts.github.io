@@ -14,7 +14,7 @@ Finally, you should do some fuzzing on pages you identify to see if any of them 
 <br/>
 <b>Links:</b>
 <br/>
-<a href="https://academy.hackthebox.com/module/41/section/519">Javascript Deobfuscation</a>
+<a href="https://academy.hackthebox.com/module/41/section/519">Javascript Deobfuscation</a><br/>
 <a href="https://jacozwarts.github.io/images/htb/js-deobfuscation/Javascript_Deobfuscation_Module_Cheat_Sheet.pdf">Javascript Deobfuscation - Cheat Sheet</a>
 <br/>
 
