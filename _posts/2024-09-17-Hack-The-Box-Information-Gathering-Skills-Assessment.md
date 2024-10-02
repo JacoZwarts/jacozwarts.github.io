@@ -20,6 +20,7 @@ Demonstrate your proficiency by effectively utilizing these techniques. Remember
 <b>Links:</b>
 <br/>
 <a href="https://academy.hackthebox.com/module/144/section/1311">Information Gathering - Web Edition</a>
+<a href="https://jacozwarts.github.io/images/htb/information-gathering/Information_Gathering_Web_Edition_Module_Cheat_Sheet.pdf">Information Gathering - Cheat Sheet</a>
 <br/>
 
 ## Q1: What is the IANA ID of the registrar of the inlanefreight.com domain?

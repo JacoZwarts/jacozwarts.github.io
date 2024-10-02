@@ -15,6 +15,7 @@ categories: [htbacademy]
 <b>Links:</b>
 <br/>
 <a href="https://academy.hackthebox.com/module/33/section/177">SQL Injection Fundamentals</a>
+<a href="https://jacozwarts.github.io/images/htb/sql-injection/Sql_Injection_Fundamentals_Module_Cheat_Sheet.pdf">SQL Injection - Cheat Sheet</a>
 <br/>
 
 

@@ -15,6 +15,7 @@ Finally, you should do some fuzzing on pages you identify to see if any of them 
 <b>Links:</b>
 <br/>
 <a href="https://academy.hackthebox.com/module/54/section/511">Attacking Web Applications with Ffuf</a>
+<a href="https://jacozwarts.github.io/images/htb/awa-with-ffuf/Attacking_Web_Applications_With_Ffuf_Module_Cheat_Sheet.pdf">Attacking Web Applications with Ffuf - Cheat Sheet</a>
 <br/>
 
 ## Q1: Run a sub-domain/vhost fuzzing scan on '*.academy.htb' for the IP shown above. What are all the sub-domains you can identify? (Only write the sub-domain name)
