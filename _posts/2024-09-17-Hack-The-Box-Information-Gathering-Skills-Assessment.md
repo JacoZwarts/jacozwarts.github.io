@@ -3,7 +3,7 @@ layout: post
 title:  "Hack The Box - Academy - Information Gathering Skills Assessment"
 date:   2024-09-17 21:05
 image:  /images/htb/information-gathering/information-gathering.png
-tags:   [recon]
+tags:   [recon,cbbh]
 categories: [htbacademy]
 ---
 

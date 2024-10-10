@@ -3,7 +3,7 @@ layout: post
 title:  "Hack The Box - Academy - Javascript Deobfuscation Skills Assessment"
 date:   2024-09-26 19:43
 image:  /images/htb/js-deobfuscation/js-deobfuscation-logo.png
-tags:   [js-deobfuscation]
+tags:   [js-deobfuscation,cbbh]
 categories: [htbacademy]
 ---
 

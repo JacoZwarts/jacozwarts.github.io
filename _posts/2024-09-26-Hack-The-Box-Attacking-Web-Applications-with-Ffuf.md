@@ -3,7 +3,7 @@ layout: post
 title:  "Hack The Box - Academy - Attacking Web Applications with Ffuf"
 date:   2024-09-26 14:36
 image:  /images/htb/awa-with-ffuf/htb-awa-ffuf.png
-tags:   [recon]
+tags:   [recon,cbbh]
 categories: [htbacademy]
 ---
 

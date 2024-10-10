@@ -3,7 +3,7 @@ layout: post
 title:  "Hack The Box - Academy - Cross Site Scripting Skills Assessment"
 date:   2024-09-29 18:45
 image:  /images/htb/cross-site-scripting/cross-site-scripting-logo.png
-tags:   [xss]
+tags:   [xss,cbbh]
 categories: [htbacademy]
 ---
 

