@@ -7,12 +7,7 @@ tags:   [sqlmap,cbbh]
 categories: [htbacademy]
 ---
 
-><b>Overview:</b>
-You are given access to a web application with basic protection mechanisms. Use the skills learned in this module to find the SQLi vulnerability with SQLMap and exploit it accordingly. To complete this module, find the flag and submit it here.
-<br/>
-
-<br/>
-<b>Links:</b>
+><b>Links:</b>
 <br/>
 <a href="https://academy.hackthebox.com/module/58/section/509">SQLMap Essentials</a><br/>
 <a href="https://jacozwarts.github.io/images/htb/sqlmap_essentials/Sqlmap_Essentials_Module_Cheat_Sheet.pdf">SQLMap - Cheat Sheet</a>
@@ -83,5 +78,20 @@ sqlmap -r Case6.txt --batch --dump -T flag6 -D testdb --no-cast --level=5 --risk
 sqlmap -r Case7.txt --batch --dump -T flag7 -D testdb --no-cast --level=5 --risk=3 --union-cols=5
 ```
 - `--union-cols=5`: Specifies the number of columns to be used in a UNION query during the SQL injection exploitation. By setting this flag to 5, you are instructing sqlmap to assume that the vulnerable query returns 5 columns. This is important for constructing valid UNION queries, as both the original and injected queries must have the same number of columns to work correctly.
+
+<hr/>
+
+### Database Enumeration & Advanced Database Enumeration - Exercises
+#### What's the contents of table flag1 in the testdb database? (Case #1)
+```
+```
+
+#### What's the name of the column containing "style" in it's name? (Case #1)
+```
+```
+
+#### What's the Kimberly user's password? (Case #1)
+```
+```
 
 <hr/>
