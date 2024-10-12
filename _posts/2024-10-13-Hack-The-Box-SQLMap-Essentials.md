@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - SQLMap Essentials"
-date:   2024-10-11 21:58
+date:   2024-10-11 12:33
 image:  /images/htb/sqlmap_essentials/logo.png
 tags:   [sqlmap,cbbh]
 categories: [htbacademy]
