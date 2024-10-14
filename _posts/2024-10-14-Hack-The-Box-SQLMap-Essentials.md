@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - SQLMap Essentials"
-date:   2024-10-13 23:07
+date:   2024-10-14 23:43
 image:  /images/htb/sqlmap_essentials/logo.png
 tags:   [sqlmap,cbbh]
 categories: [htbacademy]
@@ -126,8 +126,53 @@ sqlmap -r Case11.txt -T flag11 --dump --risk=3 --level=5 --batch --tamper=greate
 ### OS Exploitation - Exercises
 #### Try to use SQLMap to read the file "/var/www/html/flag.txt".
 ```
+sqlmap -r OsExploit.txt --file-read "/var/www/html/flag.txt" --batch --threads 10
 ```
+
 #### Use SQLMap to get an interactive OS shell on the remote host and try to find another flag within the host
 ```
+sqlmap -r OsExploit.txt --os-shell --threads 10 --batch
+```
+<hr/>
+
+## Skills Assessment
+><b>Overview:</b>
+You are given access to a web application with basic protection mechanisms. Use the skills learned in this module to find the SQLi vulnerability with SQLMap and exploit it accordingly. To complete this module, find the flag and submit it here.
+
+`Before starting the assessment, make sure Burp Suite is running and properly intercepting requests from the web application.`
+
+### Explore the Application
+After launching the box, begin investigating the web application, which is an online store called Minishop.
+
+### Menu Options: 
+Take note of the available pages in the navigation menu: Blog, Contact Us, and Catalog. These are potential areas where user input could be processed by the server.
+
+### Inspect the Blog Page
+Start with the Blog page and examine the Post Comment section.
+
+#### Post Comment Button: 
+The button is labeled "Submit", but upon inspecting the form, you’ll see the action attribute is set to #. This means the form doesn’t actually submit data to the server, eliminating it as a potential injection point.
+
+### Review the Contact Us Page
+Next, move on to the Contact Us page.
+
+#### Send Message Button: 
+Similarly, when inspecting the Send Message button, the form’s action is also set to #, indicating no data is posted to the server, so this page is not vulnerable.
+
+### Focus on the Catalog Page
+Finally, shift your focus to the Catalog page located at /shop.
+
+#### Inspect shop.html: 
+Open and inspect the shop.html file. Here, you will find a JavaScript snippet that triggers when any button with the class `add-to-cart` is clicked.
+Action Detected: The JavaScript posts a JSON object to an action.php endpoint.
+
+![HTB SQLMap Skills Assessment Js](/images/htb/sqlmap_essentials/skills-assessment-js.png)
+
+
+### Capture the Request with Burp Suite
+Intercept this request using Burp Suite. You’ll save this request for the next phase, where it will be tested using SQLMap to identify any potential SQL injection vulnerabilities.
+
+```
+sqlmap -r Add-To-Cart.txt --threads 10 --tamper=between -T final_flag --dump --batch
 ```
 <hr/>
