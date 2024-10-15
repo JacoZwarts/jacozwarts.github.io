@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - Command Injections"
 date:   2024-10-15 20:30
-image:  /images/htb/cross-site-scripting/cross-site-scripting-logo.png
+image:  /images/htb/command-injection/logo.png
 tags:   [command-injection,cbbh]
 categories: [htbacademy]
 ---
