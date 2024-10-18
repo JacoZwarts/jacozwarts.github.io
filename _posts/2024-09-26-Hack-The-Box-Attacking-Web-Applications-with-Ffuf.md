@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - Attacking Web Applications with Ffuf"
+description: "Hack The Box - Academy - Attacking Web Applications with Ffuf. Learn how to leverage Ffuf for web application attacks and boost your expertise in penetration testing as part of your CBBH certification journey with Zwarts Sec."
 date:   2024-09-26 14:36
 image:  /images/htb/awa-with-ffuf/htb-awa-ffuf.png
 tags:   [recon,cbbh]

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - SQL Injection Fundamentals"
+description: "Master the basics of SQL injection with the Hack The Box - Academy - SQL Injection Fundamentals. Learn how to detect and exploit SQL vulnerabilities, enhancing your penetration testing skills with expert insights from Zwarts Sec."
 date:   2024-10-03 20:25
 image:  /images/htb/sql-injection/logo.png
 tags:   [sqli,cbbh]

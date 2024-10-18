@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - Information Gathering Skills Assessment"
+description: "Master information gathering techniques in Hack The Box - Academy - Information Gathering Skills Assessment. Prepare for the CBBH certificate with expert tips and strategies from Zwarts Sec to boost your cybersecurity knowledge."
 date:   2024-09-17 21:05
 image:  /images/htb/information-gathering/information-gathering.png
 tags:   [recon,cbbh]

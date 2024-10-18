@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - Command Injections"
+description: "Master command injection techniques with Hack The Box - Academy - Command Injections. Learn how to exploit vulnerable web applications and improve your penetration testing skills with expert insights from Zwarts Sec."
 date:   2024-10-17 20:30
 image:  /images/htb/command-injection/logo.png
 tags:   [command-injection,cbbh]

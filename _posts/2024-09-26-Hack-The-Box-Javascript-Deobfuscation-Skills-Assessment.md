@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - Javascript Deobfuscation Skills Assessment"
+description: "Master JavaScript deobfuscation techniques in the Hack The Box - Academy - JavaScript Deobfuscation Skills Assessment. Learn essential skills for decoding obfuscated scripts and strengthen your cybersecurity knowledge with insights from Zwarts Sec."
 date:   2024-09-26 19:43
 image:  /images/htb/js-deobfuscation/js-deobfuscation-logo.png
 tags:   [js-deobfuscation,cbbh]
