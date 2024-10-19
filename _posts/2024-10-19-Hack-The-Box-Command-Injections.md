@@ -145,7 +145,7 @@ echo -n "whoami" | base64
 ```
 bash<<<$(base64%09-d<<<"d2hvYW1p")
 ```
-When running this, I encountered the error: missing destination. So, I’ll apply the payload in the to parameter as follows:
+When running this, I encountered the error: missing destination. So, I’ll apply the payload in the `to` parameter as follows:
 ![Missing Destination](/images/htb/command-injection/command-injection-skills-assessment-missing-destination-error.png)
 
 ```
