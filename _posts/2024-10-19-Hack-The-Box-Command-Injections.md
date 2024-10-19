@@ -120,9 +120,7 @@ GET /index.php?to=&from=605311066.txt
 GET /index.php?to=&from=605311066.txt&finish=1&move=1
 ```
 ### Testing for Command Injection
-Let’s start by testing these parameters for potential command injection.
-
-By adding the payloads to the `to` and `from` parameters of the `"Move File"` request, we can observe the responses. The next step is to identify which injection operators are allowed. You can use the handy command injection cheat sheet to test various operators.
+I tested the parameters mentioned above for potential command injection vulnerabilities and found that the to and from parameters in the 'Move File' request are vulnerable. The next step is to identify which injection operators are allowed. You can refer to the command injection <a href="https://jacozwarts.github.io/images/htb/command-injection/Command_Injections_Module_Cheat_Sheet.pdf">Cheat Sheet</a> to test various operators.
 
 ![Testing To Parameter](/images/htb/command-injection/command-injection-skills-assessment-move-file-to-parameter.png)
 
