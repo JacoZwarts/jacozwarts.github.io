@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - File Upload Attacks"
 description: "Follow this comprehensive walkthrough of the Hack The Box Academy File Upload Attacks Skills Assessment. Master file upload attack techniques to exploit vulnerable web applications with expert guidance from Zwarts Sec, perfect for enhancing your penetration testing skills and preparing for HTB challenges."
-date:   2024-10-19 14:24
+date:   2024-10-21 21:57
 image:  /images/htb/file-upload-attacks/logo.png
 tags:   [file-upload-attacks,cbbh]
 categories: [htbacademy]
