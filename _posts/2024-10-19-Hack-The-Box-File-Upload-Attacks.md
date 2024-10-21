@@ -15,6 +15,9 @@ categories: [htbacademy]
 <a href="https://jacozwarts.github.io/images/htb/file-upload-attacks/File_Upload_Attacks_Module_Cheat_Sheet.pdf">File Upload Attacks - Cheat Sheet</a><br/>
 <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Upload%20Insecure%20Files/Extension%20PHP/extensions.lst">PayloadsAllTheThings - PHP Extensions List</a><br/>
 
+
+<hr/>
+
 ## Whitelist Filters - Exercise
 
 ### The above exercise employs a blacklist and a whitelist test to block unwanted extensions and only allow image extensions. Try to bypass both to upload a PHP script and execute code to read `"/flag.txt"`
@@ -61,4 +64,10 @@ Identify which file extensions were successfully uploaded and test them further 
 Navigate through the folders to locate the `flag.txt` file.
 
 ![Webshell](/images/htb/file-upload-attacks/white-list-filter-flag-result.png)
+<hr/>
+
+## Type Filters - Exercise
+
+### The above server employs Client-Side, Blacklist, Whitelist, Content-Type, and MIME-Type filters to ensure the uploaded file is an image. Try to combine all of the attacks you learned so far to bypass these filters and upload a PHP file and read the flag at `"/flag.txt"`
+
 <hr/>
