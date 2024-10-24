@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - Server Side Attacks"
 description: "Follow this in-depth walkthrough of Hack The Box Academy's Server Side Attacks module. Learn how to exploit SSRF, SSTI, SSI, and XSLT vulnerabilities step-by-step, and enhance your penetration testing skills with expert insights from Zwarts Sec."
-date:   2024-10-24 06:49
+date:   2024-10-24 23:36
 image:  /images/htb/server-side-attacks/logo.png
 tags:   [server-side-attacks,ssrf,ssti,ssi,xslt,cbbh]
 categories: [htbacademy]
