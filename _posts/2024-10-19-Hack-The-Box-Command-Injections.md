@@ -19,7 +19,7 @@ categories: [htbacademy]
 
 ### Bypassing Other Blacklisted Characters - Exercises
 #### Use what you learned in this section to find name of the user in the '/home' folder. What user did you find?
-A gotcha I ran into was I didn't add a `space` between the `;` and command I'm waas trying to execute e.g.
+A gotcha I ran into was I didn't add a `space` between the `;` and command I'm was trying to execute e.g.
 `Incorrect payload: 127.0.0.1${LS_COLORS:10:1}$(rev<<<'imaohw')` <br/><br/>
 `Correct payload with a encoded \n (%0a)`
 ```
