@@ -3,7 +3,7 @@ layout: post
 title:  "PortSwigger - Directory Traversal - Mystery Labs Checklist"
 date:   2024-06-10 00:00
 image:  /images/portswigger/WebSecurityAcademy.png
-tags:   [directory-traversal,checklist]
+tags:   [directory-traversal,checklist,bscp]
 categories: [PortSwigger]
 ---
 

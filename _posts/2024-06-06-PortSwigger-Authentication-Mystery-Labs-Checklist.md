@@ -3,7 +3,7 @@ layout: post
 title:  "PortSwigger - Authentication - Mystery Labs Checklist"
 date:   2024-06-06 20:40
 image:  /images/portswigger/WebSecurityAcademy.png
-tags:   [authentication,checklist]
+tags:   [authentication,checklist,bscp]
 categories: [PortSwigger]
 ---
 

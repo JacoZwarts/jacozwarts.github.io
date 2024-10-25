@@ -3,7 +3,7 @@ layout: post
 title:  "PortSwigger - Authentication - Lab 3"
 date:   2024-06-03 18:20
 image:  /images/portswigger/WebSecurityAcademy.png
-tags:   [authentication]
+tags:   [authentication,bscp]
 categories: [PortSwigger]
 ---
 

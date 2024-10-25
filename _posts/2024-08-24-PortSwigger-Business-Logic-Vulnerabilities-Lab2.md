@@ -3,7 +3,7 @@ layout: post
 title:  "PortSwigger - Business Logic Vulnerabilities - Lab 2"
 date:   2024-08-24 10:15
 image:  /images/portswigger/WebSecurityAcademy.png
-tags:   [business-logic-vulnerability]
+tags:   [business-logic-vulnerability,bscp]
 categories: [PortSwigger]
 ---
 
