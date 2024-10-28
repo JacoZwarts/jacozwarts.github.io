@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - SQLMap Essentials"
-description: "Unlock the power of SQLMap in Hack The Box - Academy - SQLMap Essentials. Learn how to automate SQL injection attacks and enhance your penetration testing toolkit with expert advice from Zwarts Sec."
+description: "Unlock the power of SQLMap in Hack The Box - Academy - SQLMap Essentials. Learn how to automate SQL injection attacks and enhance your penetration testing toolkit."
 date:   2024-10-14 23:43
 image:  /images/htb/sqlmap_essentials/logo.png
 tags:   [sqlmap,cbbh]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - Cross Site Scripting Skills Assessment"
-description: "Develop your Cross-Site Scripting (XSS) expertise with the Hack The Box - Academy - Cross Site Scripting Skills Assessment. Learn how to identify and exploit XSS vulnerabilities, boosting your cybersecurity skills with guidance from Zwarts Sec."
+description: "Develop your Cross-Site Scripting (XSS) expertise with the Hack The Box - Academy - Cross Site Scripting Skills Assessment. Learn how to identify and exploit XSS vulnerabilities."
 date:   2024-09-29 18:45
 image:  /images/htb/cross-site-scripting/cross-site-scripting-logo.png
 tags:   [xss,cbbh]
