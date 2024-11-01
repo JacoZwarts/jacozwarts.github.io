@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hack The Box - Academy - Broken Authentication"
-description: "Explore this detailed walkthrough of Hack The Box Academy's Broken Authentication module. Learn effective techniques to perform login brute-force attacks, authentication bypass techniecues, and elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
+description: "Explore this detailed walkthrough of Hack The Box Academy's Broken Authentication module. Learn effective techniques to perform login brute-force attacks, authentication bypass techniques, and elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
 date:   2024-10-31 11:50
 image:  /images/htb/broken-auth/logo.png
 tags:   [authentication,cbbh]
