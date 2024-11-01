@@ -9,7 +9,7 @@ categories: [htbacademy]
 ---
 
 
-### Explore this detailed walkthrough of Hack The Box Academy's Javascript Deobfuscation module.
+### Explore this detailed walkthrough of Hack The Box Academy's Javascript Deobfuscation module. Learn effective techniques to decode obfuscated scripts.
 
 ><b>Overview:</b>
 <br/><br/>

@@ -8,7 +8,7 @@ tags:   [authentication,cbbh,brute-forcing]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's Login Brute Forcing module.
+### Explore this detailed walkthrough of Hack The Box Academy's Login Brute Forcing module. Learn effective techniques to perform login brute-force attacks, and authentication bypass techniques.
 
 >
 <b>Links:</b>

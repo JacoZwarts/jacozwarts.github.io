@@ -8,7 +8,7 @@ tags:   [httb-verb-tampering,idor,xxe,cbbh]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's Web Attacks module.
+### Explore this detailed walkthrough of Hack The Box Academy's Web Attacks module. Learn effective techniques to perform http verb tampering,Insecure Direct Object References (IDOR), XML External Entity (XXE) Injection
 
 >
 <b>Links:</b>

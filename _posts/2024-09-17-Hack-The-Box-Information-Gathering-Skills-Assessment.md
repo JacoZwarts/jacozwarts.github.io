@@ -8,7 +8,7 @@ tags:   [recon,cbbh]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's Information Gathering Skills Assessment module.
+### Explore this detailed walkthrough of Hack The Box Academy's Information Gathering Skills Assessment module. Learn effective techniques to perfom a successful recon.
 
 ><b>Overview:</b>
 <br/><br/>

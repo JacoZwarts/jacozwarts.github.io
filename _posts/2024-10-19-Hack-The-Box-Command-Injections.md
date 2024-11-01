@@ -8,7 +8,7 @@ tags:   [command-injection,cbbh]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's Command Injections module.
+### Explore this detailed walkthrough of Hack The Box Academy's Command Injections module. Learn effective techniques to exploit command injection vulnerabilities.
 
 >
 <b>Links:</b>

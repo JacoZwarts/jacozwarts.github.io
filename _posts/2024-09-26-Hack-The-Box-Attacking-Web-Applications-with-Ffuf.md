@@ -8,7 +8,7 @@ tags:   [recon,cbbh]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's Attacking Web Applications with Ffuf module.
+### Explore this detailed walkthrough of Hack The Box Academy's Attacking Web Applications with Ffuf module. Learn effective techniques to leverage Ffuf for web application attacks.
 
 ><b>Overview:</b>
 <br/><br/>

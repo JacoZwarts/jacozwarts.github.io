@@ -8,7 +8,7 @@ tags:   [xss,cbbh]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's Cross Site Scripting module.
+### Explore this detailed walkthrough of Hack The Box Academy's Cross Site Scripting module. Learn effective techniques to exploit Cross Site Scripting (XSS) vulnerabilities.
 
 ><b>Overview:</b>
 <br/><br/>

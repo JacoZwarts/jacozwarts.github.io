@@ -8,7 +8,7 @@ tags:   [sqlmap,cbbh]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's SQLMap Essentials module.
+### Explore this detailed walkthrough of Hack The Box Academy's SQLMap Essentials module. Learn effective techniques to exploit SQL Injection vulnerabilities using SQLMap.
 
 ><b>Links:</b>
 <br/>

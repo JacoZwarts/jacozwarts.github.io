@@ -8,7 +8,7 @@ tags:   [authentication,cbbh]
 categories: [htbacademy]
 ---
 
-### Explore this detailed walkthrough of Hack The Box Academy's Broken Authentication module.
+### Explore this detailed walkthrough of Hack The Box Academy's Broken Authentication module. Learn effective techniques to perform login brute-force attacks, and authentication bypass techniques
 
 >
 <b>Links:</b>
