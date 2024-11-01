@@ -8,6 +8,8 @@ tags:   [sqlmap,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's SQLMap Essentials module.
+
 ><b>Links:</b>
 <br/>
 <a href="https://academy.hackthebox.com/module/58/section/509">SQLMap Essentials</a><br/>

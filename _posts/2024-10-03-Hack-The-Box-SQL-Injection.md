@@ -8,6 +8,8 @@ tags:   [sqli,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's SQL Injection Fundamentals module.
+
 ><b>Overview:</b>
  Assess the web application and use a variety of techniques to gain remote code execution and find a flag in the / root directory of the file system. Submit the contents of the flag as your answer.
 <br/>

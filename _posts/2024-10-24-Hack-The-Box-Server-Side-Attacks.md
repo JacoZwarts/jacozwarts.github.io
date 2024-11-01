@@ -8,6 +8,8 @@ tags:   [server-side-attacks,ssrf,ssti,ssi,xslt,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's Server Side Attacks module.
+
 >
 <b>Links:</b>
 <br/>

@@ -8,6 +8,8 @@ tags:   [file-upload-attacks,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's File Upload Attacks module.
+
 >
 <b>Links:</b>
 <br/>

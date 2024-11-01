@@ -8,6 +8,8 @@ tags:   [authentication,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's Broken Authentication module.
+
 >
 <b>Links:</b>
 <br/>

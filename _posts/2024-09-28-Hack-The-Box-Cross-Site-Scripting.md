@@ -8,6 +8,8 @@ tags:   [xss,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's Cross Site Scripting module.
+
 ><b>Overview:</b>
 <br/><br/>
 We are performing a Web Application Penetration Testing task for a company that hired you, which just released their new Security Blog. In our Web Application Penetration Testing plan, we reached the part where you must test the web application against Cross-Site Scripting vulnerabilities (XSS).<br/><br/>

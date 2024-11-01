@@ -8,6 +8,9 @@ tags:   [js-deobfuscation,cbbh]
 categories: [htbacademy]
 ---
 
+
+### Explore this detailed walkthrough of Hack The Box Academy's Javascript Deobfuscation module.
+
 ><b>Overview:</b>
 <br/><br/>
 You are given an online academy's IP address but have no further information about their website. As the first step of conducting a Penetration Test, you are expected to locate all pages and domains linked to their IP to enumerate the IP and domains properly.<br/><br/>

@@ -8,6 +8,8 @@ tags:   [command-injection,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's Command Injections module.
+
 >
 <b>Links:</b>
 <br/>

@@ -8,6 +8,8 @@ tags:   [authentication,cbbh,brute-forcing]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's Login Brute Forcing module.
+
 >
 <b>Links:</b>
 <br/>

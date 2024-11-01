@@ -8,6 +8,8 @@ tags:   [recon,cbbh]
 categories: [htbacademy]
 ---
 
+### Explore this detailed walkthrough of Hack The Box Academy's Information Gathering Skills Assessment module.
+
 ><b>Overview:</b>
 <br/><br/>
 To complete the skills assessment, answer the questions below. You will need to apply a variety of skills learned in this module, including:<br/><br/>
