@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "Hack The Box - Academy - File Inclusion"
+description: "Explore this detailed walkthrough of Hack The Box Academy's File Inclusion module. Learn effective techniques to perform Local file inclusion (LFI), Remote File Inclusion (RFI) and elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
+date:   2024-11-24 10:25
+image:  /images/htb/file-inclusion/logo.png
+tags:   [lfi,rfi,cbbh]
+categories: [htbacademy]
+---
+
+## Explore this detailed walkthrough of Hack The Box Academy's File Inclusion module. Learn effective techniques to perform Local file inclusion (LFI), Remote File Inclusion (RFI)
+
+>
+<b>References:</b>
+<br/>
+<a href="https://academy.hackthebox.com/module/23/section/250">HTB - File Inclusion</a><br/>
+<a href="https://jacozwarts.github.io/images/htb/file-inclusion/File_Inclusion_Module_Cheat_Sheet.pdf">HTB - File Inclusion - Cheat Sheet</a><br/>
+<a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md">PayLoadsAllTheThings - File inclusion</a><br/>
+<a href="https://book.hacktricks.xyz/pentesting-web/file-inclusion">HackTricks - File inclusion</a><br/>
+
+
+
+
+## Basic Bypasses - Exercise
+> The web application employs more than one filter to avoid LFI exploitation. Try to bypass these filters to read /flag.txt
+
+### Set Up the LFI Wordlist
+```
+sudo apt install seclists
+```
+
+We’ll use the `LFI-Jhaddix.txt` wordlist, found at:
+```
+/usr/share/seclists/Fuzzing/LFI/LFI-Jhaddix.txt
+```
+
+This list includes paths that can reveal LFI vulnerabilities in web applications.
+
+### Send the Request to Caido Automate
+
+Mark the Payload Position: Send the request to Caido’s Automate tool and highlight the `es.php` part of the path as the payload position.
+
+### Configure Payload Settings
+Open the `Payload Tab`: Click on the `Payload` tab on the right side of the Automate interface.
+Choose Payload Type: Select `Simple List` as the payload type.
+Load the LFI Wordlist: Point to the `LFI-Jhaddix.txt` path in your system, and load it as the payload list.
+
+![Caido - LFI Automate](/images/htb/file-inclusion/basic-bypass-exercise-caido-automate.png)
+
+### Adjust Preprocessors
+Disable URL Encoding: Go to the `Preprocessors` tab and remove the `URL Encode` option. This ensures our payloads are sent exactly as they appear in the wordlist, which is essential for LFI testing.
+
+### Increase Worker Count
+Optimize Worker Settings: In the settings section, increase the number of workers to speed up the testing process by sending multiple requests in parallel.
+
+### Filter Results by Response Length
+After Caido completes sending requests:
+
+Apply a `Length Filter`: Look through the responses for any with a length of `3833`, as this indicates a file or directory was successfully accessed, pointing to a potential LFI vulnerability.
+
+![Caido - LFI Automate Result](/images/htb/file-inclusion/basic-bypass-exercise-caido-result.png)
+
+## PHP Filters - Exercise
+> Fuzz the web application for other php scripts, and then read one of the configuration files and submit the database password as the answer
