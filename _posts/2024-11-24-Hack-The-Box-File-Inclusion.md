@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - File Inclusion"
 description: "Explore this detailed walkthrough of Hack The Box Academy's File Inclusion module. Learn effective techniques to perform Local file inclusion (LFI), Remote File Inclusion (RFI) and elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
-date:   2024-11-24 10:25
+date:   2024-11-24 07:25
 image:  /images/htb/file-inclusion/logo.png
 tags:   [lfi,rfi,cbbh]
 categories: [htbacademy]
