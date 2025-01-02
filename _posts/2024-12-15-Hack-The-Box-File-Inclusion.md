@@ -347,3 +347,5 @@ To get the actual result you'll have to send the malicious payload a few times:
 
 
 ![Skills Assessment Result](/images/htb/file-inclusion/skills-assessment-result.png)
+
+<hr/>
