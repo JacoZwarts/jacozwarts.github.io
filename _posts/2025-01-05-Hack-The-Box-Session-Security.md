@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - Session Security"
 description: "Explore this detailed walkthrough of Hack The Box Academy's Session Security module. Learn effective techniques to perform Session Attacks utilizing Session Hijacking, Session Fixation, XSS, CSRF and Open redirects to elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
-date:   2025-01-06 20:15
+date:   2025-01-05 20:15
 image:  /images/htb/session-security/logo.png
 tags:   [session-security,cbbh]
 categories: [htbacademy]
