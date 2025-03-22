@@ -47,8 +47,6 @@ Attackers can also brute force or predict session identifiers if they are inadeq
 </script>
 ```
 
-
-
  4. The malicious script sends the victim's `document.cookie` (containing the session ID) to the attacker's server, https://attacker.com/steal.
 
  5. The attacker uses the stolen session cookie to impersonate the victim by attaching it to their own browser:
@@ -56,7 +54,7 @@ Attackers can also brute force or predict session identifiers if they are inadeq
     - Once the cookie is set, the attacker is authenticated as the victim and can perform actions on their behalf.
 
 
- #### Key Takeaways:
+ #### Key Takeaways
 
  - `Sanitizing User Input:` Prevent XSS vulnerabilities by sanitizing and escaping user input.
 
@@ -71,7 +69,7 @@ Attackers can also brute force or predict session identifiers if they are inadeq
 
  `Session Fixation` is a vulnerability where an attacker fixes a session identifier (e.g., a cookie or token) and tricks a victim into logging into an application using that identifier. Once the victim is authenticated, the attacker can hijack the session since they already know the identifier.
 
- #### Stages of Session Fixation Attack:
+ #### Stages of Session Fixation Attack
 
  1. `Obtain a Valid Session Identifier:`
     - Many applications assign session identifiers to all visitors without requiring authentication.
