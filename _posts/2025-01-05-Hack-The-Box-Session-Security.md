@@ -55,6 +55,7 @@ Attackers can also brute force or predict session identifiers if they are inadeq
     - Use a browser extension (e.g., EditThisCookie) or developer tools to set the stolen cookie.
     - Once the cookie is set, the attacker is authenticated as the victim and can perform actions on their behalf.
 
+
  #### Key Takeaways:
 
  - `Sanitizing User Input:` Prevent XSS vulnerabilities by sanitizing and escaping user input.
@@ -64,6 +65,7 @@ Attackers can also brute force or predict session identifiers if they are inadeq
  - `Encrypting Communications:` Always use HTTPS to prevent passive sniffing.
 
  <hr/>
+
 
  ### Session Fixation
 
