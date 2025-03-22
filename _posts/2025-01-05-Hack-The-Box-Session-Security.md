@@ -53,8 +53,8 @@ Attackers can also brute force or predict session identifiers if they are inadeq
     - Use a browser extension (e.g., EditThisCookie) or developer tools to set the stolen cookie.
     - Once the cookie is set, the attacker is authenticated as the victim and can perform actions on their behalf.
 
-
  #### Key Takeaways
+
 
  - `Sanitizing User Input:` Prevent XSS vulnerabilities by sanitizing and escaping user input.
 
@@ -64,12 +64,14 @@ Attackers can also brute force or predict session identifiers if they are inadeq
 
  <hr/>
 
-
  ### Session Fixation
+
 
  `Session Fixation` is a vulnerability where an attacker fixes a session identifier (e.g., a cookie or token) and tricks a victim into logging into an application using that identifier. Once the victim is authenticated, the attacker can hijack the session since they already know the identifier.
 
+
  #### Stages of Session Fixation Attack
+
 
  1. `Obtain a Valid Session Identifier:`
     - Many applications assign session identifiers to all visitors without requiring authentication.
