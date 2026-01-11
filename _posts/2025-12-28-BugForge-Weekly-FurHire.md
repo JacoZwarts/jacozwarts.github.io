@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Weekly - FurHire"
 date:   2025-12-28 10:15
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [waf-by-pass,xss]
+tags:   [waf-by-pass,xss,csrf]
 categories: [BugForge]
 ---
 
