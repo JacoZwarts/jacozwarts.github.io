@@ -23,7 +23,7 @@ xss
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>
 <br/>
-<a href="https://www.youtube.com/watch?v=0OMmWtU2Y_g">NahamCon 2024 – “Modern WAF Bypass Techniques on Large Attack Surfaces</a>
+<a href="https://www.youtube.com/watch?v=0OMmWtU2Y_g">NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces</a>
 <br/>
 <a href="https://github.com/assetnote/nowafpls">Github: nowafpls</a>
 <br/>
@@ -96,7 +96,6 @@ Use below payload because `<script>` is removed
 ```
 <img src=x onerror=alert(1)>
 ```
-
 
 ### Step 10 – XSS Execution
 Return to the **JobSeeker** dashboard.
