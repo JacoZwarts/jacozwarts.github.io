@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "categories: [BugForge]
- - Weekly - FurHire"
+title:  "BugForge - Weekly - FurHire"
 date:   2025-12-28 10:15
 image:  /images/bug-forge/bugforge-logo.png
 tags:   [waf-by-pass,xss]
