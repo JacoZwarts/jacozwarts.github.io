@@ -21,11 +21,11 @@ xss
 <br/>
 <b>Reference:</b>
 <br/>
-<a href="https://app.bugforge.io/">Bugforge.io</a>
+<!-- <a href="https://app.bugforge.io/">Bugforge.io</a> -->
 <br/>
-<a href="https://www.youtube.com/watch?v=0OMmWtU2Y_g">NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces</a>
+<!-- <a href="https://www.youtube.com/watch?v=0OMmWtU2Y_g">NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces</a> -->
 <br/>
-<a href="https://github.com/assetnote/nowafpls">Github: nowafpls</a>
+<!-- <a href="https://github.com/assetnote/nowafpls">Github: nowafpls</a> -->
 <br/>
 
 
