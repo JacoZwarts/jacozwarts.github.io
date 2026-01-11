@@ -81,9 +81,11 @@ Note that the request is blocked, indicating the presence of a Web Application F
 
 ### Step 8 – WAF Bypass Research
 Determine that a WAF bypass technique is required.
-Reference [**NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces**](https://www.youtube.com/watch?v=0OMmWtU2Y_g) by Shubs for payload inflation techniques.
+Reference 
+<!-- [**NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces**](https://www.youtube.com/watch?v=0OMmWtU2Y_g) -->
+ by Shubs for payload inflation techniques.
 
-[**Github: nowafpls**](https://github.com/assetnote/nowafpls)
+<!-- [**Github: nowafpls**](https://github.com/assetnote/nowafpls) -->
 
 
 ### Step 9 – Payload Inflation
