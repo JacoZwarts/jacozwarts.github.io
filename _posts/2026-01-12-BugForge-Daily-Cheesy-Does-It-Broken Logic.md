@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BugForge - Daily - Cheesy Does is - Broken Logic"
+title:  "BugForge - Daily - Cheesy Does it - Broken Logic"
 date:   2026-01-12 20:40
 image:  /images/bug-forge/bugforge-logo.png
 tags:   [Broken Logic]
