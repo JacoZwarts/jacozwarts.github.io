@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "BugForge- Introduction"
+date:   2025-12-28 8:00
+image:  /images/bug-forge/bugforge-logo.png
+tags:   [introduction]
+categories: [BugForge]
+---
+
+# [BugForge](https://app.bugforge.io/) - A Practical Platform for Sharpening Web Pentesting Skills
+
+[BugForge](https://app.bugforge.io/) is a hands-on application security training platform built for people who want to `practice real-world web penetration testing`, not just read about vulnerabilities in theory.
+
+![Bugforge dashboard](/images/bug-forge/intro/dashboard.png)
+
+
+Unlike many labs that focus purely on isolated vulnerabilities, [BugForge](https://app.bugforge.io/) is structured around `realistic applications, user flows, and business logic`, mirroring the kinds of systems penetration testers and AppSec engineers encounter in production environments.
+
+What makes [BugForge](https://app.bugforge.io/) stand out is its `two distinct challenge formats`:
+
+## [BugForge](https://app.bugforge.io/) Daily Challenges
+
+The `Daily` challenges are short, focused exercises designed to target a `single vulnerability class or attack technique`. They’re ideal for:
+
+- Building muscle memory around common web vulnerabilities
+- Practicing exploitation in a time-boxed format
+- Reinforcing fundamentals like input handling, access control, and trust boundaries
+
+These challenges are perfect for consistent, daily skill sharpening.
+
+## [BugForge](https://app.bugforge.io/) Weekly Challenges
+
+The `Weekly` challenges introduce a broader attack surface. These typically involve:
+
+- Multi-step workflows
+- Role-based behavior
+- Business logic and state transitions
+- Chaining vulnerabilities for real impact
+
+Weeklies encourage testers to slow down, think critically, and approach the application like a real engagement rather than a checklist exercise.
+
+## A Strong, Supportive Security Community
+
+Another major strength of [BugForge](https://app.bugforge.io/) is its active and helpful [discord community](https://discord.com/invite/7zsQHWU6wy). Users regularly share:
+
+- Thoughtful write-ups
+- Alternative exploitation paths
+- Lessons learned and mitigation insights
+
+Different perspectives from different testers make [BugForge](https://app.bugforge.io/) especially valuable - you’re not just learning how to exploit an issue, but how others think about the same problem. Many community write-ups explore nuances that go beyond the intended solution, which is exactly how real-world testing works.
+
+## Built by Someone Who Knows AppSec
+
+[BugForge](https://app.bugforge.io/) is created and maintained by [Alex](https://appsecexplained.gitbook.io/appsecexplained), also known in the community for AppSecExplained.
+
+If you’ve ever taken any of the web application security courses from [TCM Security](https://certifications.tcm-sec.com/), you’ve already encountered Alex’s work. Those [courses](https://appsecexplained.gitbook.io/appsecexplained/index-less-than-start-here/my-courses) are widely respected for their practical, no-nonsense approach to teaching web exploitation, and that same philosophy is clearly reflected in [BugForge](https://app.bugforge.io/).
+
+The challenges are intentionally designed to:
+
+- Encourage proper application analysis
+- Reward curiosity and methodical testing
+- Build intuition around how vulnerabilities actually emerge in real systems
+
+## Why [BugForge](https://app.bugforge.io/) Is Worth Your Time
+
+[BugForge](https://app.bugforge.io/) isn’t about solving puzzles for the sake of flags. It’s about:
+
+- Improving web application penetration testing skills
+- Strengthening application security thinking
+- Learning to identify and exploit vulnerabilities in realistic contexts
+
+Whether you’re a junior pentester building foundations, an experienced tester refining your approach, or an AppSec engineer wanting to stay sharp offensively, [BugForge](https://app.bugforge.io/) provides a practical environment to do exactly that.
+
+
+## A Little Friendly Competition
+
+Of course, no security lab would be complete without a leaderboard.
+
+![BugForge Leaderboard](/images/bug-forge/intro/leaderboard.png)
+
+[BugForge](https://app.bugforge.io/)’s leaderboard adds just the right amount of competitiveness to keep things interesting. Watching your name climb over time is a great motivator to stay consistent and keep testing.
+
+Then there’s `First Blood`.
+
+Being the first person to solve a challenge and claim First Blood adds an extra layer of excitement - especially when new Daily or Weekly challenges drop. On top of the bragging rights, First Blood awards extra points, giving you a tangible boost on the leaderboard and rewarding those who dive in early with solid methodology.
+
+---
