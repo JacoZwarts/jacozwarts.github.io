@@ -25,10 +25,10 @@ IDOR (Insecure Direct Object Reference)
 ### Step 1 – Account Registration
 Register a new user account using the application’s standard registration flow.
 
-![Account Registration - UI](../../images/bug-forge/daily/copy-pasta/idor-delete/account-registration.png)
+![Account Registration - UI](/images/bug-forge/daily/copy-pasta/idor-delete/account-registration.png)
 
 Analyse the registration request, to see if any roles are passed when creating a new user.
-![Account Registration - Request](../../images/bug-forge/daily/copy-pasta/idor-delete/account-registration-request-response.png)
+![Account Registration - Request](/images/bug-forge/daily/copy-pasta/idor-delete/account-registration-request-response.png)
 ---
 
 ### Step 2 – Application Reconnaissance
@@ -39,7 +39,7 @@ Focus areas:
 - API endpoints handling snippet actions
 - How snippet identifiers are passed to the backend
 
-![App endpoints - Functionality](../../images/bug-forge/daily/copy-pasta/idor-delete/app-endpoint-functionality.png)
+![App endpoints - Functionality](/images/bug-forge/daily/copy-pasta/idor-delete/app-endpoint-functionality.png)
 
 ---
 
@@ -53,7 +53,7 @@ Test performed:
 Result:
 - The update attempt failed or was properly restricted
 
-![Unauthorised snippet update attempt](../../images/bug-forge/daily/copy-pasta/idor-delete/edit-snippet-unauthorised-response.png)
+![Unauthorised snippet update attempt](/images/bug-forge/daily/copy-pasta/idor-delete/edit-snippet-unauthorised-response.png)
 
 ---
 
@@ -64,7 +64,7 @@ Result:
 - No exploitable SQL injection identified
 - Input appears to be handled or sanitized correctly
 
-![Comment - XSS attempt](../../images/bug-forge/daily/copy-pasta/idor-delete/snippet-comment-xss-attempt.png)
+![Comment - XSS attempt](/images/bug-forge/daily/copy-pasta/idor-delete/snippet-comment-xss-attempt.png)
 
 ---
 
@@ -78,7 +78,7 @@ Exploitation:
 - Iterate through different snippet IDs
 - Successfully delete snippets belonging to other users
 - 
-![Attempt to delete snippet (IDOR)](../../images/bug-forge/daily/copy-pasta/idor-delete/testing-delete-idor.png)
+![Attempt to delete snippet (IDOR)](/images/bug-forge/daily/copy-pasta/idor-delete/testing-delete-idor.png)
 
 ---
 
@@ -88,7 +88,7 @@ During ID enumeration, delete a snippet owned by another user containing the fla
 Outcome:
 - Flag successfully retrieved through unauthorized snippet deletion
 
-![Flag](../../images/bug-forge/daily/copy-pasta/idor-delete/flag.png)
+![Flag](/images/bug-forge/daily/copy-pasta/idor-delete/flag.png)
 ---
 
 ### Impact

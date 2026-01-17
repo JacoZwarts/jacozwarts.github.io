@@ -41,7 +41,7 @@ Notice that the request includes client-controlled pricing fields, such as:
 - Total price
 
 
-![Request to place order](/images/bug-forge/daily/cheesy-does-it-broken-logic/request-order-pizza.png)
+![Request to place order](/images/bug-forge/daily/cheesy-does-it/broken-logic/request-order-pizza.png)
 
 ---
 
@@ -50,7 +50,8 @@ Modify the intercepted request by changing the pricing values:
 - Set the unit price of the pizza to `0`
 - Set the total order price to `0`
 
-![Request to place order](/images/bug-forge/daily/cheesy-does-it-broken-logic/modified-order-pizza-request.png)
+![Request to place order](/images/bug-forge/daily/cheesy-does-it/broken-logic/modified-order-pizza-request.png)
+
 
 ---
 
@@ -62,7 +63,7 @@ Forward the modified `POST /order` request to the server.
 ### Step 6 – Verify the Outcome
 Confirm that the order is successfully processed and accepted with a total cost of `$0`, demonstrating that the backend trusts client-supplied pricing data.
 
-![Flag](/images/bug-forge/daily/cheesy-does-it-broken-logic/flag.png)
+![Flag](/images/bug-forge/daily/cheesy-does-it/broken-logic/flag.png)
 
 ---
 
