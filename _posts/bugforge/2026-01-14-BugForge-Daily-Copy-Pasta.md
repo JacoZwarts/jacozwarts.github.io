@@ -8,16 +8,20 @@ categories: [BugForge]
 ---
 
 # Daily - CopyPasta
-><b>Objective:</b>
-<br/>
-<b>Vulnerabilities Covered:</b>
+><br/><b>Vulnerabilities Covered:</b>
 <br/>
 IDOR (Insecure Direct Object Reference)
+<br/>
+<br/>
+<b>Summary:</b>
+<br/>
+After registering a standard user, the application was mapped to understand how snippets are created and managed, with a focus on how snippet IDs are handled across API endpoints. Attempts to modify other users’ snippets via ID manipulation in update requests were correctly restricted, and basic injection testing yielded no results. However, the **`delete`** functionality passed the snippet ID as a query parameter without proper ownership checks, allowing enumeration of IDs and unauthorized deletion of other users’ snippets, ultimately leading to flag retrieval via an IDOR in the delete endpoint.
 <br/>
 <br/>
 <b>Reference:</b>
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>
+<br/>
 <br/>
 
 ## Solution

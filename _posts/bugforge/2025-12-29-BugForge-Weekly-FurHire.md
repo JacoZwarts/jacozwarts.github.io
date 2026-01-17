@@ -8,16 +8,16 @@ categories: [BugForge]
 ---
 
 # Weekly - FurHire
-><b>Objective:</b>
-<br/>
-FurHire recently made some optimisation changes to their site. They are particularly interested in issues that could compromise user accounts and PII.
-<br/>
-<br/>
-<b>Vulnerabilities Covered:</b>
+><br/><b>Vulnerabilities Covered:</b>
 <br/>
 waf by pass<br/>
 xss<br/>
 csrf
+<br/>
+<br/>
+<b>Summary:</b>
+<br/>
+After creating recruiter and job seeker accounts, a normal job application flow was completed to identify where application status updates are handled. An initial XSS attempt in the status update request was blocked by a WAF, but payload inflation was used to bypass it and achieve stored XSS that executed in the job seeker’s dashboard. Further review revealed a password change endpoint lacking CSRF protection and current-password verification, allowing the stored XSS to be chained into an account takeover by triggering a password update, ultimately leading to flag retrieval.
 <br/>
 <br/>
 <b>Reference:</b>
@@ -27,6 +27,7 @@ csrf
 <a href="https://www.youtube.com/watch?v=0OMmWtU2Y_g">NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces</a>
 <br/>
 <a href="https://github.com/assetnote/nowafpls">Github: nowafpls</a>
+<br/>
 <br/>
 
 ## Solution
@@ -155,5 +156,38 @@ Log in using the following credentials:
 Upon successful login, observe and capture the flag.
 
 ![Jeremy Account login](/images/bug-forge/weekly/fur-hire/waf-xss/Recruiter/jeremy-login-flag.png)
+
+---
+
+### Impact
+- Stored XSS leading to execution of arbitrary JavaScript in victim sessions
+- Web Application Firewall bypass undermines defensive controls
+- Account takeover through chained XSS and insecure password change functionality
+- Compromise of user accounts and sensitive data
+
+---
+
+### Vulnerability Classification
+- **OWASP Top 10:** Injection / Insecure Design
+- **Vulnerability Type:** Stored Cross-Site Scripting (XSS) with WAF Bypass
+- **Chained Issues:** Missing CSRF Protection, Weak Authentication Controls
+- **CWE:**  
+  - CWE-79 – Improper Neutralization of Input During Web Page Generation (XSS)  
+  - CWE-352 – Cross-Site Request Forgery (CSRF)  
+  - CWE-620 – Unverified Password Change
+
+---
+
+### Root Cause
+The application allows user-controlled input to be stored and rendered without proper output encoding, and relies on a WAF as a primary control rather than robust server-side validation. Additionally, the password change endpoint lacks CSRF protection and does not require the current password, enabling account takeover when chained with XSS.
+
+---
+
+### Remediation
+- Implement proper server-side input validation and context-aware output encoding
+- Do not rely on WAFs as the sole protection against injection attacks
+- Enforce CSRF protection on all state-changing requests
+- Require current password verification for sensitive actions such as password changes
+- Apply consistent security controls across all authenticated functionality
 
 ---
