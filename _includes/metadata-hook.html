@@ -5,3 +5,18 @@
   mermaid.initialize({startOnLoad: true});
 </script>
 
+<!-- Set dark mode as default -->
+<script>
+  (function() {
+    const modeKey = 'mode';
+    const darkMode = 'dark';
+    const lightMode = 'light';
+
+    // Only set default if user hasn't made a choice yet
+    if (!localStorage.getItem(modeKey)) {
+      localStorage.setItem(modeKey, darkMode);
+      document.documentElement.setAttribute('data-mode', darkMode);
+    }
+  })();
+</script>
+
