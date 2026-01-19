@@ -8,32 +8,45 @@ categories: [BugForge]
 ---
 
 # Weekly - Furhire
-><b>Objective:</b>
+><br/><b>Vulnerabilities Covered:</b>
 <br/>
-<b>Vulnerabilities Covered:</b>
+SQLI Injection<br/>
+JWT Signing<br/>
 <br/>
-??
+<b>Summary:</b>
 <br/>
 <br/>
 <b>Reference:</b>
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>
 <br/>
+<br/>
 
 ## Solution
 
 
-### Step 1 – 
+### Step 1 – User registration
+Register a new user account and intercept the registration request and response. Review the payload for any role, privilege, or identifier fields assigned during account creation that could later influence authorization decisions.
 
 ---
 
-### Step 2 – 
+### Step 2 – Fuzz directories
+
+Found admin portal - Unauthorized error
+
 ---
 
-### Step 3 – 
+### Step 3 – Job Get BY Id sqli
 ---
 
-### Step 4 – 
+### Step 4 – JWT Signing
+
+---
+
+### Step 5 - Use new JWT
+
+Use new jwt and retrieve flag from admin portal
+
 ---
 
 
