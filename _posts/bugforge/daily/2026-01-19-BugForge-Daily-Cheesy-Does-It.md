@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Cheesy Does It"
 date:   2026-01-19 20:02
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [business-logic-flaw,property-array-injection]
+tags:   [business-logic-flaw,type-confusion]
 categories: [BugForge]
 ---
 
@@ -11,7 +11,7 @@ categories: [BugForge]
 ><br/><b>Vulnerabilities Covered:</b>
 <br/>
  Business Logic Flaw<br/>
- Property Array Injection
+ Type Confusion
 <br/>
 <br/>
 <b>Summary:</b>
