@@ -76,7 +76,7 @@ The original request was then modified to include a different `organization_id`,
 
 ![Add Team Member Request – Blocked](/images/bug-forge/weekly/galaxy-dash/business-logic-flaw/type-confusion/add-team-member-different-organization-blocked.png)
 
-By changing the `organization_id` data type from its expected format to a string, backend validation was bypassed and the user was created successfully under a different organization.
+By altering the `organization_id` from its expected (integer) data type to a `string`, the backend validation logic was bypassed, allowing the user to be created under a different organization. The same behavior can also be achieved by changing the property type to an `array`, such as [1].
 
 ![Add Team Member Request – Bypassed](/images/bug-forge/weekly/galaxy-dash/business-logic-flaw/type-confusion/add-team-member-different-organization.png)
 
