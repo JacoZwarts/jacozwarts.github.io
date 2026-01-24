@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Cafe Club"
 date:   2025-12-28 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [brute-force,broken-logic]
+tags:   [brute-force,business-logic-flaw]
 categories: [BugForge]
 ---
 
@@ -12,7 +12,7 @@ categories: [BugForge]
 <br/>
 Brute Force
 <br/>
-Broken Logic
+Business Logic Flaw
 <br/>
 <br/>
 <b>Summary</b>
