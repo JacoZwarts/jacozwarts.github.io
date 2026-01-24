@@ -4,7 +4,7 @@ icon: fas fa-user
 order: 4
 ---
 
-I'm a penetration tester specializing in web and mobile application security, with over 12 years of software engineering experience across .NET and full-stack development.
+I'm an application security engineer & pen tester specializing in web and mobile application security, with over 12 years of software engineering experience across .NET and full-stack development.
 
 My journey into security started from the other side of the table. As a developer, I experienced firsthand how disconnected security testing can feel when there's no real guidance or clarity. That frustration became curiosity, which eventually turned into a career shift focused entirely on breaking and securing applications.
 
