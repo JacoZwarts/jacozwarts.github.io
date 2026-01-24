@@ -22,19 +22,8 @@ categories: [BugForge]
 
 ## Solution
 
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
+https://www.youtube.com/watch?v=mQhe_eM0EfE
+https://medium.com/@0ber1n/shot-of-sql-at-the-cafe-club-bugforge-daily-8718c4e55a97
+https://ruur.gitbook.io/ctf-writeups/bugforge/sql-injection-cafe-club
 
 

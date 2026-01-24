@@ -21,20 +21,7 @@ categories: [BugForge]
 <br/>
 
 ## Solution
-
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
-
+https://www.youtube.com/watch?v=Ht58ljH63zQ
+https://shadowforge.gitbook.io/shadowforge-writeups/bugforge.io/readme.txt/daily-labs/bac/sokudo-1
+https://medium.com/@federoot/sokudo-broken-authentication-67833d451878
+https://medium.com/@7s26simon/sokudo-writeup-bugforge-03f1384a99f5

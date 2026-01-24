@@ -21,20 +21,10 @@ categories: [BugForge]
 <br/>
 
 ## Solution
-
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
-
+https://shadowforge.gitbook.io/shadowforge-writeups/bugforge.io/readme.txt/daily-labs/graphql/ottergram
+https://ruur.gitbook.io/ctf-writeups/bugforge/graphql-ottergram
+https://www.youtube.com/watch?v=I00-Q6fTDbU
+https://medium.com/@7s26simon/ottergram-writeup-bugforge-7e048a3db854
+https://moza369.github.io/posts/bugfrog-ottergram/
+https://blackm4c.medium.com/graphql-introspection-query-enabled-vuln-ctf-challenge-902f6dec2a64
+https://medium.com/@0ber1n/heyoooo-and-welcome-to-another-fun-bugforge-io-3b6caf832053

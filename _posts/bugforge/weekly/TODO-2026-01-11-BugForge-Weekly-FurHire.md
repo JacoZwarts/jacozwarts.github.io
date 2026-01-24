@@ -25,29 +25,8 @@ JWT Signing<br/>
 ## Solution
 
 
-### Step 1 – User registration
-Register a new user account and intercept the registration request and response. Review the payload for any role, privilege, or identifier fields assigned during account creation that could later influence authorization decisions.
 
----
-
-### Step 2 – Fuzz directories
-
-Found admin portal - Unauthorized error
-
----
-
-### Step 3 – Job Get BY Id sqli
----
-
-### Step 4 – JWT Signing
-
----
-
-### Step 5 - Use new JWT
-
-Use new jwt and retrieve flag from admin portal
-
----
-
-
-
+https://ruur.gitbook.io/ctf-writeups/bugforge/sql-injection-and-jwt-privilege-escalation-furhire
+https://bazzofx.github.io/notes/Bug-Bounty/How-to-Guides/BugForge.io/FurHire
+https://medium.com/@7s26simon/furhire-writeup-bugforge-83a1be8dee83
+https://medium.com/@0ber1n/a-furry-sqli-with-bugforge-1e8e479d4c4f

@@ -21,20 +21,8 @@ categories: [BugForge]
 <br/>
 
 ## Solution
-
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
-
+https://www.youtube.com/watch?v=lobUSW5gC-s
+https://blackm4c.medium.com/jwt-attack-ctf-challenge-bugforge-82fc762fe229
+https://moza369.github.io/posts/bugfrog-shadyoaks-financial/
+https://medium.com/@7s26simon/shady-oaks-financial-bugforge-d5b07ca09eb9
+https://medium.com/@0ber1n/jwt-at-shady-oaks-financial-bugforge-daily-challenge-00ba2ddd52a2

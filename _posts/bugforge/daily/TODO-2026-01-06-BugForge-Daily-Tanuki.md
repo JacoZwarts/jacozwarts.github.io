@@ -21,20 +21,7 @@ categories: [BugForge]
 <br/>
 
 ## Solution
-
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
+https://blackm4c.medium.com/xxe-bypass-ctf-challange-bugforge-120d56b7e9a5
+https://shadowforge.gitbook.io/shadowforge-writeups/bugforge.io/readme.txt/daily-labs/xxe/tanuki
+https://www.youtube.com/watch?v=J0LD3DWb92o&feature=youtu.be
 

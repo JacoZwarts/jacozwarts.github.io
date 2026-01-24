@@ -18,23 +18,11 @@ SQL Injection
 <b>Reference:</b>
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>
+<a href="https://portswigger.net/web-security/prototype-pollution/server-side">PortSwigger - Prototype Pollution - Server Side</a>
+
 <br/>
 
 ## Solution
 
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
-
+https://www.youtube.com/watch?v=xQQvVWC6dYI
+https://www.youtube.com/watch?v=rVcvk02eAuI&feature=youtu.be

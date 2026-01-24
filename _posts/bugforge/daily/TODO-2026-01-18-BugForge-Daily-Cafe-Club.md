@@ -26,3 +26,4 @@ categories: [BugForge]
 
 ---
 
+[FILE INCLUSION !?!??!](https://shadowforge.gitbook.io/shadowforge-writeups/bugforge.io/readme.txt/daily-labs/file-inclusion/cafeclub)

@@ -22,7 +22,5 @@ IDOR (Insecure Direct Object Reference)
 
 ## Solution
 
-### Step 1 – Account Creation
-
----
+https://shadowforge.gitbook.io/shadowforge-writeups/bugforge.io/readme.txt/daily-labs/legacy-endpoints/sokudo
 

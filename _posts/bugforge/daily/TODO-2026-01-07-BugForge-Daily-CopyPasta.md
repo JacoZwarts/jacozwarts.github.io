@@ -22,19 +22,7 @@ categories: [BugForge]
 
 ## Solution
 
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
-
+https://www.youtube.com/watch?v=IKKTAcXF4-A
+https://blackm4c.medium.com/easy-idor-ctf-challange-bugforge-7b63959194c2
+https://medium.com/@bharanidharan.spark/bug-forge-easy-daily-ctf-challenge-copypasta-78b95466e4f9
+https://medium.com/@0ber1n/copypasta-idor-bugforge-daily-challenge-f81fbf944245

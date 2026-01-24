@@ -22,19 +22,5 @@ categories: [BugForge]
 
 ## Solution
 
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
-
+https://www.youtube.com/watch?v=52NuTwLik80&feature=youtu.be
+https://blackm4c.medium.com/cafeclub-bugforge-daily-challange-ctf-c3909633ca8a

@@ -22,19 +22,6 @@ categories: [BugForge]
 
 ## Solution
 
-
-### Step 1 – 
-
----
-
-### Step 2 – 
----
-
-### Step 3 – 
----
-
-### Step 4 – 
----
-
-
-
+https://shadowforge.gitbook.io/shadowforge-writeups/bugforge.io/readme.txt/daily-labs/sqli/cheesy-does-it
+https://www.youtube.com/watch?v=qubwXyv8dM8
+https://blackm4c.medium.com/cheesy-does-it-bugforge-daily-ctf-challange-b6720563e3ba
