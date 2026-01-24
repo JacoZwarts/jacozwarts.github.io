@@ -19,7 +19,6 @@ IDOR (Insecure Direct Object Reference)
 This issue is a classic example of `broken access control` caused by trusting user-supplied object identifiers. A password reset endpoint accepts a userId parameter without verifying that the authenticated user is authorized to act on that account, allowing an attacker to reset passwords for other users, including administrators. Public API responses further leak usernames, making it trivial to identify high-value targets. By chaining identifier manipulation with information disclosure, an attacker can achieve full account takeover and access sensitive application data, demonstrating an `insecure direct object reference (IDOR)` on critical account management functionality.
 <br/>
 <br/>
-<br/>
 <b>Reference:</b>
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>

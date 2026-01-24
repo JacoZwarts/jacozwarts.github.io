@@ -18,7 +18,6 @@ categories: [BugForge]
 This challenge demonstrates a classic XML External Entity (XXE) vulnerability introduced through a server-side XML file upload feature exposed via the Import Deck functionality. After establishing a baseline during account creation, testing focused on the XML parsing behavior implied by the application’s support for JSON and XML inputs. A traditional XXE payload using an inline DTD with an external entity was submitted, initially attempting to read /etc/passwd and later adjusted to file:///app/flag.txt based on observed challenge patterns. The successful resolution of the external entity and disclosure of the flag confirmed that the backend XML parser allows DTD processing and external entity expansion. This highlights unsafe XML handling that enables arbitrary file reads and illustrates how legacy XXE payloads remain effective when secure parser configurations are not enforced.
 <br/>
 <br/>
-<br/>
 <b>Reference:</b>
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>

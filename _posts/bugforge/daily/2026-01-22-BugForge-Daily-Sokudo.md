@@ -19,7 +19,6 @@ HTTP Verb Tampering
 This challenge demonstrates a `broken access control` vulnerability exploited through `HTTP verb tampering` on a typing test statistics endpoint. After establishing a baseline during account registration, testing focused on the `/api/stats` endpoint which was designed to retrieve the authenticated user's typing performance data via GET requests. The endpoint accepted a `user_id` parameter but failed to properly validate user authorization across different HTTP methods. By leveraging Caido's HTTP verb toggle functionality and switching from GET to PUT while manipulating the `user_id` parameter, it was possible to access another user's statistics without authorization. This demonstrates how improper HTTP method handling combined with missing authorization checks creates a critical access control bypass, allowing attackers to view or modify resources belonging to other users by simply changing the HTTP verb used in the request.
 <br/>
 <br/>
-<br/>
 <b>Reference:</b>
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>

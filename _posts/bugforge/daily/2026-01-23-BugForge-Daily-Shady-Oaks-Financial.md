@@ -19,7 +19,6 @@ Concurrency Control Bypass
 This challenge demonstrates a race condition vulnerability in a currency exchange endpoint where balance verification and balance deduction are not performed as atomic operations. When multiple concurrent requests target the `/api/convert-currency` endpoint simultaneously, they all read the same account balance before any deductions are applied, allowing each request to proceed as if sufficient funds are available. This Time-of-Check Time-of-Use (TOCTOU) flaw occurs because the application lacks proper synchronization mechanisms such as database-level locking or transactional isolation, enabling an attacker to bypass balance validation checks and perform currency conversions far exceeding their actual available funds. This type of vulnerability can lead to unauthorized fund transfers, financial discrepancies, and platform liquidity drainage in real-world applications.
 <br/>
 <br/>
-<br/>
 <b>Reference:</b>
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>
