@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Shady Oaks Financial"
 date:   2026-01-23 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [race-condition,concurrency]
+tags:   [race-condition,toctou]
 categories: [BugForge]
 ---
 
