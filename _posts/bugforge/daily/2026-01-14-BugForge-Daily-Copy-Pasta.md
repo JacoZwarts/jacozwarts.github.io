@@ -26,7 +26,7 @@ After registering a standard user, the application was mapped to understand how 
 
 ## Solution
 
-### Step 1 – Account Registration
+### Step 1 - Account Registration
 Register a new user account using the application’s standard registration flow.
 
 ![Account Registration - UI](/images/bug-forge/daily/copy-pasta/idor-delete/account-registration.png)
@@ -35,7 +35,7 @@ Analyse the registration request, to see if any roles are passed when creating a
 ![Account Registration - Request](/images/bug-forge/daily/copy-pasta/idor-delete/account-registration-request-response.png)
 ---
 
-### Step 2 – Application Reconnaissance
+### Step 2 - Application Reconnaissance
 Navigate through the application to understand how snippets are created, viewed, updated, and deleted.
 
 Focus areas:
@@ -47,7 +47,7 @@ Focus areas:
 
 ---
 
-### Step 3 – Unauthorised Snippet Update Attempt
+### Step 3 - Unauthorised Snippet Update Attempt
 Attempt to update another user’s snippet by manipulating the snippet identifier.
 
 Test performed:
@@ -61,7 +61,7 @@ Result:
 
 ---
 
-### Step 4 – Input Injection Testing
+### Step 4 - Input Injection Testing
 Attempt SQL injection in the snippet comment field.
 
 Result:
@@ -72,7 +72,7 @@ Result:
 
 ---
 
-### Step 5 – Unauthorized Snippet Deletion
+### Step 5 - Unauthorized Snippet Deletion
 Analyze the delete functionality to identify authorization weaknesses.
 
 Observation:
@@ -86,7 +86,7 @@ Exploitation:
 
 ---
 
-### Step 6 – Flag Retrieval
+### Step 6 - Flag Retrieval
 During ID enumeration, delete a snippet owned by another user containing the flag.
 
 Outcome:
@@ -105,7 +105,7 @@ Outcome:
 ### Vulnerability Classification
 - OWASP Top 10: Broken Access Control
 - Vulnerability Type: Insecure Direct Object Reference (IDOR)
-- CWE: CWE-639 – Authorization Bypass Through User-Controlled Key
+- CWE: CWE-639 - Authorization Bypass Through User-Controlled Key
 
 ---
 

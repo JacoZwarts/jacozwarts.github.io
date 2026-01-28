@@ -25,21 +25,21 @@ This walkthrough demonstrates how an **`Insecure Direct Object Reference (IDOR)`
 <br/>
 
 ## Solution
-### Step 1 – Account Creation & Initial Review
+### Step 1 - Account Creation & Initial Review
 Register a new user account and intercept the registration request and response. Review the payload for any role, privilege, or identifier fields assigned during account creation that could later influence authorization decisions.
 
 ![User registration request](/images/bug-forge/daily/ottergram/idor-web-sockets/registration-request-response.png)
 
 ---
 
-### Step 2 – Observe WebSocket Activity After Login
+### Step 2 - Observe WebSocket Activity After Login
 Log into the application and monitor the network traffic. Identify active WebSocket connections, as these are commonly used for real-time functionality such as messaging and notifications.
 
 ![WebSocket calls](/images/bug-forge/daily/ottergram/idor-web-sockets/socket-requests.png)
 
 ---
 
-### Step 3 – Analyze the Messaging Functionality
+### Step 3 - Analyze the Messaging Functionality
 Send a message to the admin user and intercept the POST request to `/api/messages`. Inspect the request body and note the presence of the `recipient_id` parameter, which appears to control message delivery.
 
 ![Admin message](/images/bug-forge/daily/ottergram/idor-web-sockets/message-request.png)
@@ -50,7 +50,7 @@ Modify the `recipient_id` to your own user ID (`4`) and resend the request to te
 
 ---
 
-### Step 4 – Inspect WebSocket Message Handling
+### Step 4 - Inspect WebSocket Message Handling
 After sending a message to yourself, observe that a notification toaster appears in the top-right corner of the application.
 
 ![Toaster received](/images/bug-forge/daily/ottergram/idor-web-sockets/notification-toaster.png)
@@ -76,7 +76,7 @@ To test for an Insecure Direct Object Reference (IDOR), modify the `messageId` v
 - **OWASP Top 10:** Broken Access Control  
 - **Vulnerability Type:** Insecure Direct Object Reference (IDOR)  
 - **Attack Surface:** WebSocket-based messaging  
-- **CWE:** CWE-639 – Authorization Bypass Through User-Controlled Key
+- **CWE:** CWE-639 - Authorization Bypass Through User-Controlled Key
 
 ---
 

@@ -106,7 +106,7 @@ Redeeming the unauthorized gift card revealed the flag and completed the challen
 - **OWASP Top 10:** Broken Access Control  
 - **Vulnerability Type:** Business Logic Flaw / Predictable Identifier  
 - **Attack Surface:** Gift card redemption API  
-- **CWE:** CWE-640 – Weak Password Recovery Mechanism for Forgotten Password (applied to weak token generation)  
+- **CWE:** CWE-640 - Weak Password Recovery Mechanism for Forgotten Password (applied to weak token generation)  
 
 ---
 

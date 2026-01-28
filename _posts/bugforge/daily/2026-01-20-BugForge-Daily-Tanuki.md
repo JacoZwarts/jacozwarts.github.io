@@ -26,7 +26,7 @@ This challenge demonstrates a classic XML External Entity (XXE) vulnerability in
 
 ## Solution
 
-### Step 1 – Account Creation & Baseline Review
+### Step 1 - Account Creation & Baseline Review
 
 ![Registration Request](/images/bug-forge/daily/Tanuki/xxe/traditional/registration-request-response.png)
 
@@ -58,7 +58,7 @@ We'll change the path to ```file:///app/flag.txt```.
 ---
 
 
-### Step 1 – Account Creation & Baseline Review
+### Step 1 - Account Creation & Baseline Review
 
 ![Registration Request](/images/bug-forge/daily/Tanuki/xxe/traditional/registration-request-response.png)
 
@@ -67,7 +67,7 @@ The focus is on identifying any role, permission, or privilege-related fields th
 
 ---
 
-### Step 2 – File Upload Testing (XXE)
+### Step 2 - File Upload Testing (XXE)
 
 While navigating the application, the **Import Deck** option in the menu indicates that the application supports file uploads.
 
@@ -142,7 +142,7 @@ This change successfully returned the contents of the flag file, confirming the 
 - **OWASP Top 10:** Injection  
 - **Vulnerability Type:** XML External Entity (XXE) Injection  
 - **Attack Surface:** File upload and server-side XML parsing functionality  
-- **CWE:** CWE-611 – Improper Restriction of XML External Entity Reference  
+- **CWE:** CWE-611 - Improper Restriction of XML External Entity Reference  
 
 ---
 

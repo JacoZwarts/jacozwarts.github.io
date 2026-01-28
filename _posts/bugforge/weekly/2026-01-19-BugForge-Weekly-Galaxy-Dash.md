@@ -74,11 +74,11 @@ A new team member was created as part of normal application behavior. During thi
 
 The original request was then modified to include a different `organization_id`, attempting to create a user for another organization. This attempt was initially blocked by backend validation.
 
-![Add Team Member Request – Blocked](/images/bug-forge/weekly/galaxy-dash/business-logic-flaw/type-confusion/add-team-member-different-organization-blocked.png)
+![Add Team Member Request - Blocked](/images/bug-forge/weekly/galaxy-dash/business-logic-flaw/type-confusion/add-team-member-different-organization-blocked.png)
 
 By altering the `organization_id` from its expected (integer) data type to a `string`, the backend validation logic was bypassed, allowing the user to be created under a different organization. The same behavior can also be achieved by changing the property type to an `array`, such as [1].
 
-![Add Team Member Request – Bypassed](/images/bug-forge/weekly/galaxy-dash/business-logic-flaw/type-confusion/add-team-member-different-organization.png)
+![Add Team Member Request - Bypassed](/images/bug-forge/weekly/galaxy-dash/business-logic-flaw/type-confusion/add-team-member-different-organization.png)
 
 After logging in with the newly created user and navigating to the **Team** section, the challenge flag was visible, confirming successful exploitation.
 
@@ -99,7 +99,7 @@ After logging in with the newly created user and navigating to the **Team** sect
 - **OWASP Top 10:** Broken Access Control  
 - **Vulnerability Type:** Business Logic Flaw / Type Confusion  
 - **Attack Surface:** Team management and user provisioning API  
-- **CWE:** CWE-843 – Access of Resource Using Incompatible Type  
+- **CWE:** CWE-843 - Access of Resource Using Incompatible Type  
 
 ---
 

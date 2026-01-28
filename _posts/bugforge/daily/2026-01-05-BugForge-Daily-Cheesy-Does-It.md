@@ -84,10 +84,10 @@ Upon successful authentication bypass, the application grants admin access and i
 ---
 
 ### Vulnerability Classification
-- **OWASP Top 10:** A03:2021 – Injection
+- **OWASP Top 10:** A03:2021 - Injection
 - **Vulnerability Type:** SQL Injection (Authentication Bypass)
 - **Attack Surface:** Login API endpoint (`POST /api/login`)
-- **CWE:** CWE-89 – Improper Neutralization of Special Elements used in an SQL Command
+- **CWE:** CWE-89 - Improper Neutralization of Special Elements used in an SQL Command
 
 ---
 

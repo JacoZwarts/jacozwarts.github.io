@@ -25,7 +25,7 @@ Broken Access Control
 <br/>
 
 ## Solution
-### Step 1 – Account Creation
+### Step 1 - Account Creation
 
 Inspect the user registration request and response to identify any roles or privilege-related fields being assigned during account creation.
 
@@ -33,7 +33,7 @@ Inspect the user registration request and response to identify any roles or priv
 
 ---
 
-### Step 2 – Endpoint Analysis
+### Step 2 - Endpoint Analysis
 
 Use **JS Recon Buddy** to enumerate and analyze available application endpoints. During this process, identify endpoints that appear to be restricted to administrative users.
 
@@ -41,7 +41,7 @@ Use **JS Recon Buddy** to enumerate and analyze available application endpoints.
 
 ---
 
-### Step 3 – Unauthorized Access to Admin Endpoint
+### Step 3 - Unauthorized Access to Admin Endpoint
 
 Attempt to access the `admin/users` endpoint directly while authenticated as a standard user, without any administrative role assigned.
 
@@ -51,7 +51,7 @@ The request succeeds, confirming that the endpoint is accessible without proper 
 
 ---
 
-### Step 4 – Accessing the Admin Flag
+### Step 4 - Accessing the Admin Flag
 
 After confirming the presence of broken access control, directly request the `admin/flag` endpoint.
 
@@ -72,7 +72,7 @@ The flag is returned, demonstrating a critical authorization failure due to miss
 ### Vulnerability Classification
 - OWASP Top 10: Broken Access Control
 - Vulnerability Type: Missing Function-Level Authorization
-- CWE: CWE-285 – Improper Authorization
+- CWE: CWE-285 - Improper Authorization
 
 ---
 

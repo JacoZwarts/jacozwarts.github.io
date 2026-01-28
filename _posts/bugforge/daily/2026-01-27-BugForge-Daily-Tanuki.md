@@ -59,10 +59,10 @@ The server processes the request and updates the second account's profile using 
 ---
 
 ### Vulnerability Classification
-- **OWASP Top 10:** A01:2021 – Broken Access Control
+- **OWASP Top 10:** A01:2021 - Broken Access Control
 - **Vulnerability Type:** Insecure Direct Object Reference (IDOR)
 - **Attack Surface:** Profile update API endpoint
-- **CWE:** CWE-639 – Authorization Bypass Through User-Controlled Key
+- **CWE:** CWE-639 - Authorization Bypass Through User-Controlled Key
 
 ---
 

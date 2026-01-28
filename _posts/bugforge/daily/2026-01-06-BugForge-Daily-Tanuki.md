@@ -113,10 +113,10 @@ The server processed the XInclude directive and returned the contents of the fla
 ---
 
 ### Vulnerability Classification
-- **OWASP Top 10:** A03:2021 – Injection
+- **OWASP Top 10:** A03:2021 - Injection
 - **Vulnerability Type:** XML External Entity (XXE) via XInclude
 - **Attack Surface:** File upload and server-side XML parsing functionality
-- **CWE:** CWE-611 – Improper Restriction of XML External Entity Reference
+- **CWE:** CWE-611 - Improper Restriction of XML External Entity Reference
 
 ---
 

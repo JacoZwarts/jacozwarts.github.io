@@ -26,17 +26,17 @@ After creating an account and placing a normal pizza order, the checkout request
 
 ## Solution
 
-### Step 1 – Account Creation
+### Step 1 - Account Creation
 Create a new user account and log in to the application.
 
 ---
 
-### Step 2 – Place a Pizza Order
+### Step 2 - Place a Pizza Order
 Browse the menu and place a pizza order using the standard checkout process.
 
 ---
 
-### Step 3 – Intercept the Order Request
+### Step 3 - Intercept the Order Request
 Intercept the checkout request and observe the `POST /order` request sent to the backend.
 
 Notice that the request includes client-controlled pricing fields, such as:
@@ -48,7 +48,7 @@ Notice that the request includes client-controlled pricing fields, such as:
 
 ---
 
-### Step 4 – Modify Pricing Parameters
+### Step 4 - Modify Pricing Parameters
 Modify the intercepted request by changing the pricing values:
 - Set the unit price of the pizza to `0`
 - Set the total order price to `0`
@@ -58,12 +58,12 @@ Modify the intercepted request by changing the pricing values:
 
 ---
 
-### Step 5 – Submit the Modified Request
+### Step 5 - Submit the Modified Request
 Forward the modified `POST /order` request to the server.
 
 ---
 
-### Step 6 – Verify the Outcome
+### Step 6 - Verify the Outcome
 Confirm that the order is successfully processed and accepted with a total cost of `$0`, demonstrating that the backend trusts client-supplied pricing data.
 
 ![Flag](/images/bug-forge/daily/cheesy-does-it/broken-logic/flag.png)
@@ -81,7 +81,7 @@ Confirm that the order is successfully processed and accepted with a total cost 
 ### Vulnerability Classification
 - **OWASP Top 10:** Insecure Design
 - **Vulnerability Type:** Business Logic Flaw (Client-Side Price Manipulation)
-- **CWE:** CWE-602 – Client-Side Enforcement of Server-Side Security
+- **CWE:** CWE-602 - Client-Side Enforcement of Server-Side Security
 
 ---
 

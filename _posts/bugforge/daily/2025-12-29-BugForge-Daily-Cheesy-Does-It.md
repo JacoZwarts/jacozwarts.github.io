@@ -109,7 +109,7 @@ The unauthorized response revealed the flag, completing the challenge.
 - **OWASP Top 10:** Broken Access Control  
 - **Vulnerability Type:** Insecure Direct Object Reference (IDOR)  
 - **Attack Surface:** Order retrieval API  
-- **CWE:** CWE-639 – Authorization Bypass Through User-Controlled Key  
+- **CWE:** CWE-639 - Authorization Bypass Through User-Controlled Key  
 
 ---
 

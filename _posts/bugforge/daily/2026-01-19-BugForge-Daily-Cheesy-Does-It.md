@@ -27,14 +27,14 @@ This vulnerability is a business logic flaw in the checkout process where the ba
 
 ## Solution
 
-### Step 1 – Account Creation & Baseline Review
+### Step 1 - Account Creation & Baseline Review
 Begin by inspecting the account registration flow. Pay close attention to the request and response to identify whether any role, permission, or privilege-related fields are being assigned or trusted during account creation.
 
 ![User registration request](/images/bug-forge/daily/cheesy-does-it/business-logic-array-injection/registration-request-analysis.png)
 
 ---
 
-### Step 2 – Identifying the Discount Hint
+### Step 2 - Identifying the Discount Hint
 After logging in, review the dashboard for any informational messages that may influence application behavior. An alert is displayed stating:  
 `Use the discount code PIZZA-10 for a 10% discount today only!`
 
@@ -44,7 +44,7 @@ This serves as a strong indicator to further investigate how discounts are handl
 
 ---
 
-### Step 3 – Inspecting the Checkout Flow
+### Step 3 - Inspecting the Checkout Flow
 Proceed to the checkout process and observe how pricing and discounts are applied from the UI. Capture and analyze the order submission request to understand how the discount code is processed server-side.
 
 ![Checkout Process UI](/images/bug-forge/daily/cheesy-does-it/business-logic-array-injection/checkout-ui.png)
@@ -53,7 +53,7 @@ Proceed to the checkout process and observe how pricing and discounts are applie
 
 ---
 
-### Step 4 – Applying Multiple Discount Codes
+### Step 4 - Applying Multiple Discount Codes
 First, attempt to modify the discount code from `PIZZA-10` to `PIZZA-20`. This does not succeed, indicating server-side validation on individual values.
 
 Next, change the discount code parameter to an array and submit multiple discount codes in a single request. This approach succeeds, resulting in multiple discounts being applied to the order.
@@ -75,7 +75,7 @@ Next, change the discount code parameter to an array and submit multiple discoun
 - **OWASP Top 10:** Broken Access Control  
 - **Vulnerability Type:** Business Logic Flaw / Array Injection  
 - **Attack Surface:** Checkout and order processing API  
-- **CWE:** CWE-840 – Business Logic Errors  
+- **CWE:** CWE-840 - Business Logic Errors  
 
 ---
 

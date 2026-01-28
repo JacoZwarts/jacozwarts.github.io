@@ -63,10 +63,10 @@ Using the discovered endpoint and payload structure, craft a malicious refund re
 ---
 
 ### Vulnerability Classification
-- **OWASP Top 10:** A04:2021 – Insecure Design (lack of server-side validation for financial operations)
+- **OWASP Top 10:** A04:2021 - Insecure Design (lack of server-side validation for financial operations)
 - **Vulnerability Type:** Business Logic Flaw / Insufficient Input Validation
 - **Attack Surface:** Refund processing API endpoint
-- **CWE:** CWE-840 – Business Logic Errors
+- **CWE:** CWE-840 - Business Logic Errors
 
 ---
 

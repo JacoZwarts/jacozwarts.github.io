@@ -84,7 +84,7 @@ Decode the exfiltrated Base64 string using CyberChef or a similar tool to reveal
 - **OWASP Top 10:** Injection (Cross-Site Scripting)
 - **Vulnerability Type:** Stored XSS with Out-of-Band Data Exfiltration
 - **Attack Surface:** Messaging functionality with unsanitized HTML rendering
-- **CWE:** CWE-79 – Improper Neutralization of Input During Web Page Generation
+- **CWE:** CWE-79 - Improper Neutralization of Input During Web Page Generation
 
 ---
 

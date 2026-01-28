@@ -64,7 +64,7 @@ Upon analyzing the automation results, one of the responses returned the challen
 ---
 
 ### Vulnerability Classification
-- **OWASP Top 10:** A04:2021 – Insecure Design (lack of concurrency controls and transaction integrity)
+- **OWASP Top 10:** A04:2021 - Insecure Design (lack of concurrency controls and transaction integrity)
 - **Vulnerability Type:** Race Condition / Time-of-Check Time-of-Use (TOCTOU)
 - **Attack Surface:** Currency conversion API endpoint
 - **CWE:** CWE-362 - Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')

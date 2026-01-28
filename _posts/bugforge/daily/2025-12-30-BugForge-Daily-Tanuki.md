@@ -15,7 +15,7 @@ Mass Assignment
 <br/>
 <b>Summary:</b>
 <br/>
-This vulnerability is a `mass assignment–driven privilege escalation` where the application trusts client-supplied input during user registration and allows sensitive attributes, such as user_role, to be set directly by the user. By manipulating the registration request and changing the role from a standard user to an administrator, an attacker can create an account with elevated privileges. The absence of server-side allowlisting and role enforcement results in a complete breakdown of authorization controls and unrestricted access to administrative functionality.
+This vulnerability is a `mass assignment-driven privilege escalation` where the application trusts client-supplied input during user registration and allows sensitive attributes, such as user_role, to be set directly by the user. By manipulating the registration request and changing the role from a standard user to an administrator, an attacker can create an account with elevated privileges. The absence of server-side allowlisting and role enforcement results in a complete breakdown of authorization controls and unrestricted access to administrative functionality.
 <br/>
 <br/>
 <b>Reference:</b>
@@ -96,7 +96,7 @@ Accessing the admin area revealed the flag, completing the challenge.
 - **OWASP Top 10:** Broken Access Control  
 - **Vulnerability Type:** Mass Assignment / Privilege Escalation  
 - **Attack Surface:** User registration API  
-- **CWE:** CWE-915 – Improperly Controlled Modification of Dynamically-Determined Object Attributes  
+- **CWE:** CWE-915 - Improperly Controlled Modification of Dynamically-Determined Object Attributes  
 
 ---
 

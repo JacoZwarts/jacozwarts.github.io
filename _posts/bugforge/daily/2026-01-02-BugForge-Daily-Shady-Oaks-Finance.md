@@ -109,7 +109,7 @@ Accessing the admin area returned the flag, completing the challenge.
 - **OWASP Top 10:** Broken Access Control / Security Misconfiguration
 - **Vulnerability Type:** Parameter Tampering / Insecure Design / Privilege Escalation
 - **Attack Surface:** Upgrade API endpoint
-- **CWE:** CWE-639 – Authorization Bypass Through User-Controlled Key
+- **CWE:** CWE-639 - Authorization Bypass Through User-Controlled Key
 
 ---
 

@@ -87,7 +87,7 @@ Review the extracted data returned in the application response. The administrato
 - **OWASP Top 10:** Injection
 - **Vulnerability Type:** SQL Injection (UNION-based)
 - **Attack Surface:** Profile retrieval endpoint with unsanitized user input
-- **CWE:** CWE-89 – Improper Neutralization of Special Elements used in an SQL Command
+- **CWE:** CWE-89 - Improper Neutralization of Special Elements used in an SQL Command
 
 ---
 

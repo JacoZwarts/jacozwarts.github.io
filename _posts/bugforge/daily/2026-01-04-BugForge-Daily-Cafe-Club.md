@@ -104,7 +104,7 @@ This demonstrates a classic business logic vulnerability where the developer ass
 - **OWASP Top 10:** A04:2021 - Insecure Design (missing server-side validation of business rules)
 - **Vulnerability Type:** Business Logic Flaw / Insufficient Input Validation
 - **Attack Surface:** E-commerce checkout API endpoint
-- **CWE:** CWE-20 – Improper Input Validation
+- **CWE:** CWE-20 - Improper Input Validation
 
 ---
 

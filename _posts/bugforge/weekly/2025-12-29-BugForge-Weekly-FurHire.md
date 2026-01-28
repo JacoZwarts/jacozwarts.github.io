@@ -24,7 +24,7 @@ After creating recruiter and job seeker accounts, a normal job application flow 
 <br/>
 <a href="https://app.bugforge.io/">Bugforge.io</a>
 <br/>
-<a href="https://www.youtube.com/watch?v=0OMmWtU2Y_g">NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces</a>
+<a href="https://www.youtube.com/watch?v=0OMmWtU2Y_g">NahamCon 2024 - Modern WAF Bypass Techniques on Large Attack Surfaces</a>
 <br/>
 <a href="https://github.com/assetnote/nowafpls">Github: nowafpls</a>
 <br/>
@@ -32,7 +32,7 @@ After creating recruiter and job seeker accounts, a normal job application flow 
 
 ## Solution
 
-### Step 1 – Account Creation
+### Step 1 - Account Creation
 Create two user accounts:
 - One account with the **JobSeeker** role
 - One account with the **Recruiter** role
@@ -41,12 +41,12 @@ Create two user accounts:
 
 ---
 
-### Step 2 – Job Posting
+### Step 2 - Job Posting
 Log in as the **Recruiter** and create a new job posting.
 
 ---
 
-### Step 3 – Job Application
+### Step 3 - Job Application
 Log in as the **JobSeeker** and apply to the newly created job posting.
 
 ![Job Seeker - Application](/images/bug-forge/weekly/fur-hire/waf-xss/Job%20Seeker/Zwarts-Application.png)
@@ -55,7 +55,7 @@ Log in as the **JobSeeker** and apply to the newly created job posting.
 
 ---
 
-### Step 4 – Application Review
+### Step 4 - Application Review
 Switch back to the **Recruiter** account.
 Review incoming applications and accept the JobSeeker’s application.
 
@@ -63,7 +63,7 @@ Review incoming applications and accept the JobSeeker’s application.
 
 ---
 
-### Step 5 – Notification Confirmation
+### Step 5 - Notification Confirmation
 Log back in as the **JobSeeker**.
 Observe the notification indicating that the application has been accepted.
 
@@ -71,7 +71,7 @@ Observe the notification indicating that the application has been accepted.
 
 ---
 
-### Step 6 – Payload Analysis
+### Step 6 - Payload Analysis
 Inspect the network traffic related to the application status update.
 Identify and analyze the request payload responsible for updating the application state.
 
@@ -79,7 +79,7 @@ Identify and analyze the request payload responsible for updating the applicatio
 
 ---
 
-### Step 7 – Initial XSS Attempt
+### Step 7 - Initial XSS Attempt
 Attempt to inject a basic XSS payload into the request.
 Note that the request is blocked, indicating the presence of a Web Application Firewall (WAF).
 
@@ -87,17 +87,17 @@ Note that the request is blocked, indicating the presence of a Web Application F
 
 ---
 
-### Step 8 – WAF Bypass Research
+### Step 8 - WAF Bypass Research
 Determine that a WAF bypass technique is required.
 Reference 
-[**NahamCon 2024 – Modern WAF Bypass Techniques on Large Attack Surfaces**](https://www.youtube.com/watch?v=0OMmWtU2Y_g)
+[**NahamCon 2024 - Modern WAF Bypass Techniques on Large Attack Surfaces**](https://www.youtube.com/watch?v=0OMmWtU2Y_g)
  by Shubs for payload inflation techniques.
 
 [**Github: nowafpls**](https://github.com/assetnote/nowafpls)
 
 ---
 
-### Step 9 – Payload Inflation
+### Step 9 - Payload Inflation
 Modify the request by adding an approximately **8KB payload** to evade WAF detection.
 
 ![Waf Bypass](/images/bug-forge/weekly/fur-hire/waf-xss/Recruiter/request-by-pass-waf.png)
@@ -110,7 +110,7 @@ Use below payload because `<script>` is removed
 
 ---
 
-### Step 10 – XSS Execution
+### Step 10 - XSS Execution
 Return to the **JobSeeker** dashboard.
 Confirm that the injected XSS payload is executed.
 
@@ -118,7 +118,7 @@ Confirm that the injected XSS payload is executed.
 
 ---
 
-### Step 11 – Additional Functionality Review
+### Step 11 - Additional Functionality Review
 Review other application functionality.<br/>
 Identify a password update feature that:
 - Lacks CSRF protection
@@ -129,7 +129,7 @@ Identify a password update feature that:
 
 ---
 
-### Step 12 – XSS to Password Change
+### Step 12 - XSS to Password Change
 Craft a JavaScript payload that abuses the stored XSS to trigger a password update request.
 
 Reference the application’s JavaScript code and the `apiRequest` helper function.
@@ -140,7 +140,7 @@ Base64-encode the malicious request body to avoid issues with special characters
 
 ---
 
-### Step 13 – Test Account Takeover
+### Step 13 - Test Account Takeover
 Execute the payload.
 Confirm that the password for the test account has been updated successfully.
 
@@ -148,7 +148,7 @@ Confirm that the password for the test account has been updated successfully.
 
 ---
 
-### Step 14 – Flag Retrieval
+### Step 14 - Flag Retrieval
 Log in using the following credentials:
 - **Username:** Jeremy
 - **Password:** Test1234
@@ -172,9 +172,9 @@ Upon successful login, observe and capture the flag.
 - **Vulnerability Type:** Stored Cross-Site Scripting (XSS) with WAF Bypass
 - **Chained Issues:** Missing CSRF Protection, Weak Authentication Controls
 - **CWE:**  
-  - CWE-79 – Improper Neutralization of Input During Web Page Generation (XSS)  
-  - CWE-352 – Cross-Site Request Forgery (CSRF)  
-  - CWE-620 – Unverified Password Change
+  - CWE-79 - Improper Neutralization of Input During Web Page Generation (XSS)  
+  - CWE-352 - Cross-Site Request Forgery (CSRF)  
+  - CWE-620 - Unverified Password Change
 
 ---
 
