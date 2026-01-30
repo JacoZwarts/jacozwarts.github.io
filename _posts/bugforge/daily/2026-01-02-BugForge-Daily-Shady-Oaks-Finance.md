@@ -35,7 +35,11 @@ This vulnerability is a **broken access control issue caused by insecure design*
 A new user account was registered and authenticated to the financial trading application.
 After logging in, the application was explored to understand available functionality and identify potential privilege escalation vectors.
 
+![Login Request](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/registration-request.png)
+
 The application provided standard features including stock trading values, portfolio management, money exchange functionality, and trading history.
+
+![Dashboard](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/dashboard.png)
 
 ---
 
@@ -43,6 +47,8 @@ The application provided standard features including stock trading values, portf
 
 An "Upgrade" feature was discovered that allowed users to start a 7-day free trial of premium trading insights.
 This feature appeared to modify user permissions or roles to grant access to additional functionality.
+
+![Upgrade Feature](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/upgrade-ui.png)
 
 Clicking the "Start 7-Day Free Trial" button changed the interface to display "Insider Tips", indicating that the user's role or permissions had been modified.
 
@@ -62,29 +68,42 @@ Upon inspecting the request body, a `role` parameter was discovered that was bei
 
 This indicated a potential insecure design flaw where the application was trusting client-supplied input to set the user's role, rather than handling role assignment logic exclusively on the backend.
 
+![Upgrade Request](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/upgrade-request.png)
+
 ---
 
 ### Step 5 - Role Parameter Manipulation
+
+During the initial code analysis, the `Header.js` component revealed that the `administrator` role was required to access the admin feature. This provided valuable insight into the exact role value needed for privilege escalation.
+
+![Code Analysis](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/code-analysis.png)
 
 The `role` parameter value in the upgrade request was modified from its original value to `administrator` before sending the request to the server.
 
 This manipulation tested whether the backend would accept arbitrary role values supplied by the client.
 
+![Upgrade - Admin - Request](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/upgrade-request-administrator.png)
+
 ---
 
 ### Step 6 - JWT Token Analysis
 
-After sending the modified request, the JWT token returned in the response was analyzed using a JWT decoder.
+After sending the modified request, the JWT token returned in the response was analysed using a JWT decoder.
 
 The decoded token revealed that the `role` claim within the JWT now reflected the value `administrator`, confirming that the backend accepted the client-supplied role parameter without validation.
+
+![JWT Analysed](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/jwt-analysed.png)
 
 ---
 
 ### Step 7 - Token Refresh and Admin Access
 
-To ensure the modified JWT token was active in the browser session, the page was refreshed (alternatively, logging out and logging back in achieves the same result).
+To ensure the modified JWT token was active in the browser session, we had to log out and log in again.
 
-Upon refresh, an **Admin Panel** became accessible in the application interface, confirming successful privilege escalation.
+After logging in, an **Admin Panel** became accessible in the application interface, confirming successful privilege escalation.
+
+![Admin Panel](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/admin-tab.png)
+
 
 ---
 
@@ -93,6 +112,9 @@ Upon refresh, an **Admin Panel** became accessible in the application interface,
 Navigating to the Admin Panel revealed administrative functionality that should not be accessible to standard users.
 
 Accessing the admin area returned the flag, completing the challenge.
+
+![JWT Analysed](/images//bug-forge/daily/shady-oaks-financial/insecure-design-upgrade-feature/flag.png)
+
 
 ---
 
