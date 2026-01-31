@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Weekly - Fur Hire"
 date:   2026-01-31 09:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [sql-injection,sql-injection-second-order]
+tags:   [sql-injection,sql-injection-second-order,weekly,fur-hire]
 categories: [BugForge]
 ---
 

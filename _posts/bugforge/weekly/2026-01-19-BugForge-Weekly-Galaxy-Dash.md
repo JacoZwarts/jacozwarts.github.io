@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Weekly - Galxy Dash"
 date:   2026-01-19 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [business-logic-flaw,type-confusion]
+tags:   [business-logic-flaw,type-confusion,weekly,galaxy-dash]
 categories: [BugForge]
 ---
 
