@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Tanuki"
 date:   2026-01-13 20:40
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [idor]
+tags:   [idor,daily,tanuki]
 categories: [BugForge]
 ---
 

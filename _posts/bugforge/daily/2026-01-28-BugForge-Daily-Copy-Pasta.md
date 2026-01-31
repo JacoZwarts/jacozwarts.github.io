@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Copy Pasta"
 date:   2026-01-28 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [sqli]
+tags:   [sqli,daily,copy-pasta]
 categories: [BugForge]
 ---
 

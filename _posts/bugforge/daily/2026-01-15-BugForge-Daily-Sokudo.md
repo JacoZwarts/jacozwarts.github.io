@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Sokudo"
 date:   2026-01-15 20:40
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [api-versioning,broken-authentication,idor,jwt-manipulation]
+tags:   [api-versioning,broken-authentication,idor,jwt-manipulation,daily,sokudo]
 categories: [BugForge]
 ---
 

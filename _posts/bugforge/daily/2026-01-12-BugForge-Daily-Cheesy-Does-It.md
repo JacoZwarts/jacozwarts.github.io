@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Cheesy Does it"
 date:   2026-01-12 20:40
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [business-logic-flaw]
+tags:   [business-logic-flaw,daily,cheesy-does-it]
 categories: [BugForge]
 ---
 

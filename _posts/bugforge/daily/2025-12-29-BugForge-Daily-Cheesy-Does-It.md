@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Cheesy Does It"
 date:   2025-12-29 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [idor]
+tags:   [idor,daily,cheesy-does-it]
 categories: [BugForge]
 ---
 

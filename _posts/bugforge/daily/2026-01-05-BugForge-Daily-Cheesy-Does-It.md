@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Cheesy Does It"
 date:   2026-01-05 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [sqli]
+tags:   [sqli,daily,cheesy-does-it]
 categories: [BugForge]
 ---
 

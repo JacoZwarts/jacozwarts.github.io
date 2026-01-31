@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Shady Oaks Finance (Repeat)"
 date:   2026-01-30 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [broken-access-control,parameter-tampering,insecure-design]
+tags:   [broken-access-control,parameter-tampering,insecure-design,daily,shady-oaks-finance]
 categories: [BugForge]
 ---
 

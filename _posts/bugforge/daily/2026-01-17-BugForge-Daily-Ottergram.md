@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Ottergram"
 date:   2026-01-17 19:25
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [web-sockets,idor]
+tags:   [web-sockets,idor,daily,ottergram]
 categories: [BugForge]
 ---
 

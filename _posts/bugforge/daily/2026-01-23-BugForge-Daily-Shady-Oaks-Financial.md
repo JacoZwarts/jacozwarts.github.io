@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "BugForge - Daily - Shady Oaks Financial"
+title:  "BugForge - Daily - Shady Oaks Finance"
 date:   2026-01-23 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [race-condition,toctou]
+tags:   [race-condition,toctou,daily,shady-oaks-finance]
 categories: [BugForge]
 ---
 
-# Daily - Shady Oaks Financial
+# Daily - Shady Oaks Finance
 ><br/><b>Vulnerabilities Covered:</b>
 <br/>
 Race Condition

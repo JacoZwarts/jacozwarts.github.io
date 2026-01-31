@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Cafe Club"
 date:   2025-12-28 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [brute-force,business-logic-flaw]
+tags:   [brute-force,business-logic-flaw,daily,cafe-club]
 categories: [BugForge]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "BugForge - Daily - Cheesy Does It"
 date:   2026-01-26 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [business-logic-flaw,insufficient-validation]
+tags:   [business-logic-flaw,insufficient-validation,daily,cheesy-does-it]
 categories: [BugForge]
 ---
 
