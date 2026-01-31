@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - CopyPasta"
 date:   2026-01-14 19:48
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [idor,daily,copy-pasta]
-categories: [BugForge]
+tags:   [idor]
+categories: [BugForge,daily,copy-pasta]
 ---
 
 # Daily - CopyPasta

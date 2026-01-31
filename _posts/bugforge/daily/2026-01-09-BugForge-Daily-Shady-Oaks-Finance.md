@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - Shady Oaks Finance"
 date:   2026-01-09 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [jwt,authentication-bypass,none-algorithm,broken-authentication,daily,shady-oaks-finance]
-categories: [BugForge]
+tags:   [jwt,authentication-bypass,none-algorithm,broken-authentication]
+categories: [BugForge,daily,shady-oaks-finance]
 ---
 
 # Daily - Shady Oaks Finance

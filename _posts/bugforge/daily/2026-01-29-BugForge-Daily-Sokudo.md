@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - Sokudo"
 date:   2026-01-29 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [broken-authentication,daily,sokudo]
-categories: [BugForge]
+tags:   [broken-authentication]
+categories: [BugForge,daily,sokudo]
 ---
 
 # Daily - Sokudo

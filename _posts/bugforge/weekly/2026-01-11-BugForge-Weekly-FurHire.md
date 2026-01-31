@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Weekly - FurHire"
 date:   2026-01-11 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [sql-injection,jwt,privilege-escalation,weekly,fur-hire]
-categories: [BugForge]
+tags:   [sql-injection,jwt,privilege-escalation]
+categories: [BugForge,weekly,fur-hire]
 ---
 
 # Weekly - FurHire

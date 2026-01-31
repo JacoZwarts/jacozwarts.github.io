@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - Cafe Club"
 date:   2026-01-18 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [path-traversal,lfi,daily,cafe-club]
-categories: [BugForge]
+tags:   [path-traversal,lfi]
+categories: [BugForge,daily,cafe-club]
 ---
 
 # Daily - Cafe Club

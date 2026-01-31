@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - 2026 Vibe Predictor"
 date:   2025-12-31 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [ssti,daily,2026-vibe-predictor]
-categories: [BugForge]
+tags:   [ssti]
+categories: [BugForge,daily,2026-vibe-predictor]
 ---
 
 # Daily - 2026 Vibe Predictor

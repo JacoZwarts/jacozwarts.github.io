@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - Tanuki"
 date:   2025-12-30 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [mass-assignment,daily,tanuki]
-categories: [BugForge]
+tags:   [mass-assignment]
+categories: [BugForge,daily,tanuki]
 ---
 
 # Daily - Tanuki

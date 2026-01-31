@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Weekly - Galaxy Dash"
 date:   2026-01-04 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [prototype-pollution,weekly,galaxy-dash]
-categories: [BugForge]
+tags:   [prototype-pollution]
+categories: [BugForge,weekly,galaxy-dash]
 ---
 
 # Weekly - Galaxy Dash

@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - Cafe Club"
 date:   2026-01-11 20:00
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [sqli,sqlite,daily,cafe-club]
-categories: [BugForge]
+tags:   [sqli,sqlite]
+categories: [BugForge,daily,cafe-club]
 ---
 
 # Daily - Cafe Club

@@ -3,8 +3,8 @@ layout: post
 title:  "BugForge - Daily - Ottergram"
 date:   2026-01-17 19:25
 image:  /images/bug-forge/bugforge-logo.png
-tags:   [web-sockets,idor,daily,ottergram]
-categories: [BugForge]
+tags:   [web-sockets,idor]
+categories: [BugForge,daily,ottergram]
 ---
 
 # Daily - Shady Oaks Finance
